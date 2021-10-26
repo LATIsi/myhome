@@ -2,6 +2,10 @@
 # myhome
 # 포트폴리오 전용 홈페이지
 
+# React-router-dom 라이브러리를 설치하여 만들었습니다.
+
+# react를 배포하기위해 gh-pages 라이브러리를 설치하였습니다.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
