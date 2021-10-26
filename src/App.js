@@ -17,13 +17,12 @@ function App() {
           </ul>
         </div>
       </header>
-      <h1>test</h1>
-      <nav>testnav</nav>
-      <ul>
-        <li></li>
-      </ul>
+      
       <Route path="/skill"><popol1>skill</popol1></Route>
       <Route path="/project"><popol2>project</popol2></Route>
+      <nav>down testnav</nav>
+      <nav2>down testnav</nav2>
+      
     </div>
   );
 }
