@@ -1,8 +1,13 @@
 import React from 'react';
-import popol1 from './page/popol1';
-import popol2 from './page/popol2';
+import Skill from './page/Skill';
+import Project from './page/Project';
 import './App.css';
-import {Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
+
+// json package.json script 에
+    //"start": "react-scripts start",
+    //"build": "react-scripts build",
+    //이 기본.
 
 function App() {
   return (
@@ -17,12 +22,23 @@ function App() {
           </ul>
         </div>
       </header>
-      
-      <Route path="/skill"><popol1>skill</popol1></Route>
-      <Route path="/project"><popol2>project</popol2></Route>
+      <Switch>
+      <Route path="/" exact>
+        this is a home
+
+
+
+
+
+
+
+      </Route>
+      <Route path="/skill"><Skill>skill</Skill></Route>
+      <Route path="/project"><Project>project</Project></Route>
+      <Route path="/">NOT Found</Route>
+      </Switch>
+      <hr/>
       <nav>down testnav</nav>
-      <nav2>down testnav</nav2>
-      
     </div>
   );
 }
