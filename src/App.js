@@ -2,34 +2,41 @@ import React from 'react';
 import Skill from './page/Skill';
 import Project from './page/Project';
 import Home from './page/Home';
-import './App.css';
+import Intro from './page/Intro';
+import './style/nav_style.css';
 import {Route, Switch} from 'react-router-dom';
+import styled from "styled-components";
+
+
+const Content = styled.div`
+padding-top: 60px;
+overflow :hidden;
+`;
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1> MINJI's PROPOPOL </h1>
-        <div className="header-list">
+      <nav className="navbar">
+      <div className="nav_text">MINJI's PROPOPOL</div>
+      <div className="nav_menu">
           <ul>
-          <a href="/"><li>home</li></a>
-          <li>|</li>
-          <a href="/skill"><li>skill</li></a>
-          <li>|</li>
-          <a href="/project"><li>project</li></a>
+            <li><a href="/project">PROJECT</a></li>
+            <li><a href="/skill">SKILL</a></li>           
+            <li><a href="/intro">INTRO</a></li>
+            <li><a href="/home">HOME</a></li>
           </ul>
         </div>
-      </header>
+      </nav>
+      <Content>
       <Switch>
-      <Route path="/" exact><Home>home</Home></Route>
+      <Route path="/home" exact><Home>home</Home></Route>
+      <Route path="/intro"><Intro>intro</Intro></Route>
       <Route path="/skill"><Skill>skill</Skill></Route>
       <Route path="/project"><Project>project</Project></Route>
-      <Route path="/">NOT Found</Route>
+      <Route path="/"><Home>home</Home></Route>
       </Switch>
-      <div className="bottom">
-        <hr/>
-        <nav><a className="a_white" href="https://github.com/LATIsi" target="_blank" rel="noopener noreferrer">Github</a></nav>
-      </div>
+      </Content>
     </div>
   );
 }
