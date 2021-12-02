@@ -4,3 +4,31 @@
     height: 100vh;
     left:0;
 }
+
+.intro_Picture{
+    position: absolute;
+    width: 140px;
+    height:140px;
+    right: 10%;
+    top: 15%;
+    border-radius: 50%;
+    background-image: url('../Image/intro.jpg');
+    background-repeat: no-repeat ;
+    background-size: cover;
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+.IntroButton{
+    position: absolute;
+    top: 8%;
+    width: 15%;
+    height: 60px;
+    border:none;
+    color: #223440;
+    padding-bottom: 20px;
+    font-family:'Noto Sans KR';
+    background: #F2F2F2;
+    border-radius: 20px;
+}
