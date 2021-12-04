@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 import '../style/Intro_style.css';
 import IntroItem from './Items/IntroItem';
+import '../App.css';
+
 
 const IntroRecord = styled.div`
       width:65vw;
@@ -139,6 +141,7 @@ class Intro extends Component{
              <IntroselfTop>
              <Name>Kim minji</Name>
              <Birthday>1999.11.01</Birthday>
+             <nav><a href="https://github.com/LATIsi" target="_blank" rel="noopener noreferrer">Github</a></nav>
              </IntroselfTop>
              <div className="intro_Picture"></div>
              <IntroHr1/>
