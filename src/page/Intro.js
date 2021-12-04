@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import '../style/Intro_style.css';
+import IntroItem from './Items/IntroItem';
 
 const IntroRecord = styled.div`
       width:65vw;
@@ -115,22 +116,23 @@ const EduButton = styled.button`
 
 
 const CertiButton = styled.button`
-    left: 25%;
+    left: 22%;
 `;
 
 const IntroSelfDownText = "디자인/그림이 취미인 \n 개발에 관심이 많은 신입 개발자입니다!!";
 
 class Intro extends Component{
-
-
     render(){
-      console.log('Intro render');
       return(
         <div className="IntroBg">
           <IntroRecord>
             <EduButton className="IntroButton">학력</EduButton>
             <CertiButton className="IntroButton">자격증</CertiButton>
             <EduCertiDiv>
+                  <IntroItem/>
+                  <IntroItem/>
+                  <IntroItem/>
+                  <IntroItem/>
             </EduCertiDiv>
           </IntroRecord>
            <Introself>
