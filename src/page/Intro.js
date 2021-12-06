@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import '../style/Intro_style.css';
-import IntroItem from './Items/IntroItem';
 import '../App.css';
+import IntroList from './List/IntroList';
+import { AiFillGithub } from 'react-icons/ai';
 
 
 const IntroRecord = styled.div`
@@ -23,7 +24,7 @@ const Introself = styled.div`
 
 const IntroselfTop = styled.div`
       width:17vw;
-      height:20vh;
+      height:22vh;
       position: absolute;
       right: 17vw;
       top: 15%;
@@ -50,7 +51,6 @@ const Name = styled.text`
       font-size: 42px;
       line-height: 60px;
       text-align: right;
-
       color: #000000;
 `;
 
@@ -61,7 +61,6 @@ const Birthday = styled.text`
       height: 63px;
       right: 0;
       top:7vh;
-
       font-family: Noto Sans KR;
       font-style: normal;
       font-weight: normal;
@@ -95,16 +94,14 @@ const IntroselfText = styled.text`
       font-size: 16px;
       line-height: 18px;
       /* or 133% */
-
       text-align: right;
-
       color: #223440;
 
 `;
 
 const EduCertiDiv = styled.div`
     position: absolute;
-    width: 50vw;
+    width: 51vw;
     height: 65vh;
     left: 10%;
     top: 15%;
@@ -123,6 +120,16 @@ const CertiButton = styled.button`
 
 const IntroSelfDownText = "디자인/그림이 취미인 \n 개발에 관심이 많은 신입 개발자입니다!!";
 
+const Icons = styled.div`
+      position: absolute;
+      width: 100%;
+      height: auto;
+      right:0;
+      bottom:0;
+      text-align: right;
+      display: inline;
+`;
+
 class Intro extends Component{
     render(){
       return(
@@ -131,17 +138,18 @@ class Intro extends Component{
             <EduButton className="IntroButton">학력</EduButton>
             <CertiButton className="IntroButton">자격증</CertiButton>
             <EduCertiDiv>
-                  <IntroItem/>
-                  <IntroItem/>
-                  <IntroItem/>
-                  <IntroItem/>
+                  <IntroList/>
             </EduCertiDiv>
           </IntroRecord>
            <Introself>
              <IntroselfTop>
              <Name>Kim minji</Name>
              <Birthday>1999.11.01</Birthday>
-             <nav><a href="https://github.com/LATIsi" target="_blank" rel="noopener noreferrer">Github</a></nav>
+             <Icons>
+             <a href="https://github.com/LATIsi" target="_blank" rel="noopener noreferrer"><AiFillGithub size="30"/></a>
+             <a href="https://github.com/LATIsi" target="_blank" rel="noopener noreferrer"><AiFillGithub size="30"/></a>
+             <a href="https://github.com/LATIsi" target="_blank" rel="noopener noreferrer"><AiFillGithub size="30"/></a>
+             </Icons>
              </IntroselfTop>
              <div className="intro_Picture"></div>
              <IntroHr1/>

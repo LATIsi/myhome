@@ -24,11 +24,12 @@
     position: absolute;
     top: 8%;
     width: 12%;
-    height: 60px;
+    height: 70px;
     border:none;
     color: #223440;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     font-family:'Noto Sans KR';
     background: #F2F2F2;
     border-radius: 20px;
+
 }

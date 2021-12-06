@@ -1,19 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../../style/Item_style.css';
+import '../../style/Intro_style.css';
 
-class IntroItem extends Component{
-     render(){
-      return(
-        <div className="IntroItem">
-            <div className="IntroItem_day">
-                2018.03
-            </div>
-            <div className="IntroItem_content">
-                랄라라라라라라라랄라라라라랄라ㅏ랄라라라라라라라랄라라라라랄라ㅏ랄라라라라라라라랄라라라라랄라ㅏ
-            </div>
-        </div>
-      );
-    }
-  }
+function IntroItem({ id, day, desc, edu }) {
+  return (
+    <div className="IntroItem">
+    <div className="IntroItem_day">{day}</div>
+    <div className="IntroItem_content">{desc}</div>
+    </div>
+  );
+}
 
-  export default IntroItem;
+export default IntroItem;

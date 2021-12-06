@@ -1,21 +1,22 @@
 .IntroItem{
-    position: absolute;
+    position: relative;
     width: 100%;
-    height:auto;
-    background-color: burlywood;
+    height:110px;
+    margin-top: 0.5vw;
+    padding-bottom: 0.5vw;
 }
 
 .IntroItem_day{
     position: absolute;
+    top:6px;
     width: auto;
     height: 30px;
     right:0;
-    top:20px;
-    margin-right:40px;
+    margin-right:35px;
     font-family: NATS;
     font-style:normal;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 25px;
     color: #033540;
 }
@@ -27,24 +28,21 @@
     width: auto;
     white-space: pre-wrap;
     background: #4BA4F2;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    top:50px;
+    top:35px;
     right: 0;
     font-family: NATS;
     font-style: normal;
     font-weight:500;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 24px;
     right: 0;
     margin-right:20px;
     margin-left:20px;
-    margin-bottom:20px;
     padding: 15px 30px;
     /* or 125% */
-    
     text-align: right;
-    
     color: #F2F2F2;
 
 }
