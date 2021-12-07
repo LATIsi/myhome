@@ -1,7 +1,23 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import '../style/project_style.css';
+import ProjectList from './List/ProjectList';
 
+const ProjectScroll = styled.div`
+    position: absolute;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      width: 0.8vw;
+    }
+    &::-webkit-scrollbar-thumb {
+      height: 15%;
+      background-color: #a4b3be;
+      border-radius: 5px;  
+    }
+`;
 
 const ProjectBg = styled.div`
 position: absolute;
@@ -76,7 +92,7 @@ height:auto;
 const ProjectBg2 = styled.div`
 position: absolute;
 width: 100%;
-bottom:0;
+bottom:-120%;
 height:300px;
 background: linear-gradient(0deg, rgba(73, 73, 73, 0.08) 17.28%,
 rgba(181, 181, 181, 0.06) 54.77%, rgba(255, 255, 255, 0) 83.18%);
@@ -87,7 +103,7 @@ class Project extends Component{
       console.log('Project render');
       return(
         <>
-        <div className="project_scroll">
+        <ProjectScroll>
         <ProjectBg>
           <div className="ProjectTopDiv">
         <ProjectTopText>Project</ProjectTopText>
@@ -96,20 +112,18 @@ class Project extends Component{
           </div>
         <TeamProject>
         <div className="ProjectHeaderText">Team project</div>
-
-
+          <ProjectList/>
         <div className="ProjectLinkText">team pj PPT file download - github</div>
         </TeamProject>
         <ProjectHr2></ProjectHr2>
         <PersonalProject>
         <div className="ProjectHeaderText">personal project</div>
-
-
+          <ProjectList/>
         <div className="ProjectLinkText">personal pj PPT file download - github</div>
         </PersonalProject>
         </ProjectBg>
-        <ProjectBg2></ProjectBg2>
-        </div>
+        <ProjectBg2/>
+        </ProjectScroll>
         </>
       );
     }

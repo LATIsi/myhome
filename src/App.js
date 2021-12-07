@@ -4,7 +4,7 @@ import Project from './page/Project';
 import Home from './page/Home';
 import Intro from './page/Intro';
 import './style/nav_style.css';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, BrowserRouter} from 'react-router-dom';
 import styled from "styled-components";
 
 
@@ -17,6 +17,7 @@ overflow :hidden;
 function App() {
   return (
     <div className="App">
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
       <nav className="navbar">
       <div className="nav_text">MINJI's PROPOPOL</div>
       <div className="nav_menu">
@@ -34,9 +35,10 @@ function App() {
       <Route path="/intro"><Intro>intro</Intro></Route>
       <Route path="/skill"><Skill>skill</Skill></Route>
       <Route path="/project"><Project>project</Project></Route>
-      <Route path="/"><Home>home</Home></Route>
+      <Route path="/" ><Home>home</Home></Route>
       </Switch>
       </Content>
+      </BrowserRouter>
     </div>
   );
 }
