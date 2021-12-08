@@ -7,7 +7,7 @@ const ProjectScroll = styled.div`
     position: absolute;
     left:0;
     width: 100%;
-    height: 100%;
+    height: 150%;
     overflow: scroll;
     &::-webkit-scrollbar {
       width: 0.8vw;
@@ -44,17 +44,13 @@ color: #000000;
 `;
 
 const ProjectTopTextDesc = styled.text`
-position: absolute;
 width: 100%;
-height: 60px;
-right: 0;
-top: 120px;
-font-family: NATS;
+height: 30px;
+font-family: 'Noto Sans KR';
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
-text-align: right;
-
+text-align: left;
 color: #000000;
 `;
 
@@ -79,14 +75,18 @@ border: none;
 
 const TeamProject = styled.div`
 position: relative;
-width: 100%;
+width: 85%;
 height:auto;
+left: 50%;
+transform: translateX(-50%);
 `;
 
 const PersonalProject = styled.div`
 position: relative;
-width: 100%;
+width: 85%;
 height:auto;
+left: 50%;
+transform: translateX(-50%);
 `;
 
 const ProjectBg2 = styled.div`
@@ -98,6 +98,9 @@ background: linear-gradient(0deg, rgba(73, 73, 73, 0.08) 17.28%,
 rgba(181, 181, 181, 0.06) 54.77%, rgba(255, 255, 255, 0) 83.18%);
 `;
 
+
+
+
 class Project extends Component{
     render(){
       console.log('Project render');
@@ -108,17 +111,17 @@ class Project extends Component{
           <div className="ProjectTopDiv">
         <ProjectTopText>Project</ProjectTopText>
         <ProjectHr1></ProjectHr1>
-        <ProjectTopTextDesc>대학교 수업을 들으며 진행 했던 프로젝트들 입니다.</ProjectTopTextDesc>
           </div>
         <TeamProject>
         <div className="ProjectHeaderText">Team project</div>
-          <ProjectList/>
+        <ProjectTopTextDesc>대학교 수업을 들으며 진행 했던 프로젝트들 입니다.</ProjectTopTextDesc>
+          <ProjectList team={true}/>
         <div className="ProjectLinkText">team pj PPT file download - github</div>
         </TeamProject>
         <ProjectHr2></ProjectHr2>
         <PersonalProject>
         <div className="ProjectHeaderText">personal project</div>
-          <ProjectList/>
+          <ProjectList team={false}/>
         <div className="ProjectLinkText">personal pj PPT file download - github</div>
         </PersonalProject>
         </ProjectBg>
