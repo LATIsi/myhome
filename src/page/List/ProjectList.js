@@ -11,7 +11,7 @@ const ProjectCotent = [
     alt:'남성 의류 쇼핑몰',
     day: '2019.03 - 2019.06',
     desc: '남성 의류 쇼핑몰 분석, 계획, DB구성',
-    team: true
+    select: 'team'
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const ProjectCotent = [
     alt:'우리마트다모여',
     day: '2019.09 - 2019.12',
     desc: '우리마트다모여 / 집 주변 동네마트 검색, 조회, 배달 앱',
-    team: true
+    select: 'team'
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const ProjectCotent = [
     alt:'the model',
     day: '2020.09 - 2020.12',
     desc: 'the model / 모델 구인구직 어플 ',
-    team: true
+    select: 'team'
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const ProjectCotent = [
     alt:'신구대 서점 어플',
     day: '2020.03 - 2020.06',
     desc: '신구대 서점 어플 / 기획서 ',
-    team: false
+    select: 'personal'
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const ProjectCotent = [
     alt:'side dish',
     day: '2020.09 - 2020.12',
     desc: '반찬가게 배달 어플 side dish / 기획서 ',
-    team: false
+    select: 'personal'
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const ProjectCotent = [
     alt:'to_do list',
     day: '2021.10 - 2021.11',
     desc: 'to_do list / react',
-    team: false
+    select: 'personal'
   }
 ];
 
@@ -61,12 +61,15 @@ const ProjectlistBlock = styled.div`
     padding:0 20px;
 `;
 
-
 class ProjectList extends Component{
      render(){
+       const {select} = this.props;
+       const PersonalContent =  ProjectCotent.filter(Item => ('personal' === Item.select));
+       const TeamContent =  ProjectCotent.filter(Item => ('team' === Item.select));
+
       return(
         <ProjectlistBlock>
-        {ProjectCotent.map(Item => (
+        {select === "team" ? TeamContent.map(Item => (
            <ProjectItem
            key={Item.id}
            id={Item.id}
@@ -74,9 +77,17 @@ class ProjectList extends Component{
            alt={Item.alt}
            day={Item.day}
            desc={Item.desc}
-           team={Item.team}
-         />
-        ))}
+           select={Item.select}/>
+        )) : PersonalContent.map(Item => (
+          <ProjectItem
+          key={Item.id}
+          id={Item.id}
+          img={Item.img}
+          alt={Item.alt}
+          day={Item.day}
+          desc={Item.desc}
+          select={Item.select}/>
+       )) }
      </ProjectlistBlock>
       );
     }

@@ -31,7 +31,7 @@ function App() {
       </nav>
       <Content>
       <Switch>
-      <Route path="/home" exact><Home>home</Home></Route>
+      <Route path="/myhome/home" exact><Home>home</Home></Route>
       <Route path="/intro"><Intro>intro</Intro></Route>
       <Route path="/skill"><Skill>skill</Skill></Route>
       <Route path="/project"><Project>project</Project></Route>

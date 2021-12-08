@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../style/Item_style.css';
 
-function IntroItem({ id, img, alt, day, desc, team }) {
+function IntroItem({ id, img, alt, day, desc, select }) {
   return (
     <div className="ProjectItem">
     <img className="ProjectItem_img" alt={alt} src={ process.env.PUBLIC_URL+img}/>

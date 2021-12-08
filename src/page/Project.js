@@ -98,12 +98,8 @@ background: linear-gradient(0deg, rgba(73, 73, 73, 0.08) 17.28%,
 rgba(181, 181, 181, 0.06) 54.77%, rgba(255, 255, 255, 0) 83.18%);
 `;
 
-
-
-
 class Project extends Component{
     render(){
-      console.log('Project render');
       return(
         <>
         <ProjectScroll>
@@ -115,13 +111,13 @@ class Project extends Component{
         <TeamProject>
         <div className="ProjectHeaderText">Team project</div>
         <ProjectTopTextDesc>대학교 수업을 들으며 진행 했던 프로젝트들 입니다.</ProjectTopTextDesc>
-          <ProjectList team={true}/>
+          <ProjectList select="team"/>
         <div className="ProjectLinkText">team pj PPT file download - github</div>
         </TeamProject>
         <ProjectHr2></ProjectHr2>
         <PersonalProject>
         <div className="ProjectHeaderText">personal project</div>
-          <ProjectList team={false}/>
+          <ProjectList select="personal"/>
         <div className="ProjectLinkText">personal pj PPT file download - github</div>
         </PersonalProject>
         </ProjectBg>
