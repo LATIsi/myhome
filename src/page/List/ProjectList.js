@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../style/Item_style.css';
 import ProjectItem from '../Items/ProjectItem';
 import styled from "styled-components";
+
 //alt는 사진 설명
 //team이 true인것은 팀프로젝트, 아닌것들은 (혼자 제작한 프로젝트는) false
 const ProjectCotent = [
@@ -57,8 +58,12 @@ const ProjectCotent = [
 
 const ProjectlistBlock = styled.div`
     width: 100%;
-    height: auto;
-    padding:0 20px;
+    height: 100%;
+    float: left;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 20px;
+    margin-bottom: 20px;
 `;
 
 class ProjectList extends Component{

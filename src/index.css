@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/earlyaccess/nats.css');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap');
-@import url('https://fonts.googleapis.com/earlyaccess/nats.css');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/earlyaccess/nats.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap");
+@import url("https://fonts.googleapis.com/earlyaccess/nats.css");
 body {
   margin: 0;
-  font-family:Noto Sans KR, Righteous, -apple-system, NATS, BlinkMacSystemFont, Segoe UI, Roboto,  sans-serif, Helvetica
-        Neue, Arial, Apple Color Emoji, Segoe UI Emoji;
+  font-family: Noto Sans KR, Righteous, -apple-system, NATS, BlinkMacSystemFont,
+    Segoe UI, Roboto, sans-serif, Helvetica Neue, Arial, Apple Color Emoji,
+    Segoe UI Emoji;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
@@ -14,12 +15,14 @@ body {
   position: fixed;
   overflow: hidden;
   touch-action: none;
+  margin: 0;
+  padding: 0;
   @media (min-width: 768px) {
     font-size: 16px;
   }
 }
 
 code {
-  font-family: Righteous,NATS,source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: Righteous, NATS, source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
 }

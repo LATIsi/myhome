@@ -1,10 +1,14 @@
 .ProjectTopDiv {
   position: relative;
   width: 100%;
-  height: 180px;
+  height: 150px;
+  margin-top: 70px;
+  margin-bottom: 20px;
 }
 
 .ProjectHeaderText {
+  position: relative;
+  left: 5%;
   font-family: NATS;
   height: 60px;
   font-style: normal;
@@ -14,10 +18,19 @@
 }
 
 .ProjectLinkText {
+  position: relative;
   font-family: NATS;
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
   text-align: right;
   color: #373737;
+  margin-bottom: 70px;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.ProjectLinkText a:hover {
+  color: royalblue;
+  text-decoration: none;
 }

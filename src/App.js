@@ -9,15 +9,17 @@ import styled from "styled-components";
 
 
 const Content = styled.div`
-padding-top: 60px;
-overflow :hidden;
+overflow-y:auto;
+overflow-x:hidden;
+height: 100%;
+width: 100%;
 `;
 
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename="/myhome">
       <nav className="navbar">
       <div className="nav_text">MINJI's PROPOPOL</div>
       <div className="nav_menu">
@@ -31,7 +33,7 @@ function App() {
       </nav>
       <Content>
       <Switch>
-      <Route path="/myhome/home" exact><Home>home</Home></Route>
+      <Route path="/home" exact><Home>home</Home></Route>
       <Route path="/intro"><Intro>intro</Intro></Route>
       <Route path="/skill"><Skill>skill</Skill></Route>
       <Route path="/project"><Project>project</Project></Route>
