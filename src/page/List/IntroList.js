@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../style/Item_style.css';
 import IntroItem from '../Items/IntroItem';
-import styled , { css } from "styled-components";
+import styled from "styled-components";
 
 const IntroEduCotent = [
   {
@@ -49,19 +49,19 @@ const IntroEduCotent = [
   {
     id: 8,
     day: '2017.07',
-    desc: '컴퓨터 그래픽스 운용기능사',
+    desc: '컴퓨터그래픽스운용기능사',
     edu: 'Certi'
   },
   {
     id: 9,
     day: '2017.12',
-    desc: '전자상거래 운용사',
+    desc: '전자상거래운용사',
     edu: 'Certi'
   },
   {
     id: 10,
     day: '2021.06',
-    desc: '정보 처리 산업 기사',
+    desc: '정보처리산업기사',
     edu: 'Certi'
   }
 ];
@@ -83,66 +83,32 @@ const IntrolistBlock = styled.div`
     }
 `;
 
-const View1 = styled.div`
-width: 100%;
-height: 100%;
-position: relative;
-left:0;
-top:0;
-${({ selection }) => {
-  return selection === 'Certi'  ?
-  css `   display: hidden; ` 
-  :
-  css ` color: #929292;
-  background: #E4E4E4;
-  ` ;
-}}
-`;
-
-const View2 = styled.div`
-width: 100%;
-height: 100%;
-position: relative;
-left:0;
-top:0;
-${({ selection }) => {
-  return selection === 'Edu'  ?
-  css `   display: hidden; ` 
-  :
-  css ` color: #929292;
-  background: #E4E4E4;
-  ` ;
-}}
-`;
-
   class IntroList extends Component{
     render(){
-      const {selection} = this.props;
+      const {select} = this.props;
       const EduContent =  IntroEduCotent.filter(Item => ('Edu' === Item.edu));
       const CertiContent =  IntroEduCotent.filter(Item => ('Certi' === Item.edu));
 
      return(
               <IntrolistBlock>
-              <View1 selection ={selection}>
-                {EduContent.map(Item => (
+              {select === 'Edu' ? EduContent.map(Item => (
+                 <IntroItem
+                 key={Item.id}
+                 id={Item.id}
+                 day={Item.day}
+                 desc={Item.desc}
+                 edu={Item.edu}
+               />
+               
+              )) : CertiContent.map(Item => (
                 <IntroItem
                 key={Item.id}
                 id={Item.id}
                 day={Item.day}
                 desc={Item.desc}
-                edu={Item.edu}/>
-              ))}
-              </View1>
-              <View2 selection ={selection}>
-              {CertiContent.map(Item => (
-                <IntroItem
-                key={Item.id}
-                id={Item.id}
-                day={Item.day}
-                desc={Item.desc}
-                edu={Item.edu}/>
+                edu={Item.edu}
+              />
             )) }
-              </View2>
           </IntrolistBlock>
      );
    }

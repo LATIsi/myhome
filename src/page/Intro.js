@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled , { css } from "styled-components";
+import styled from "styled-components";
 import "../style/Intro_style.css";
 import "../App.css";
 import IntroList from "./List/IntroList";
@@ -120,22 +120,10 @@ const SelectButton = styled.button`
       margin-left: 7.8vw;
     }
 
-    ${({ on }) => {
-      return on ?
-      css ` color: #223440;
-      background: #f2f2f2;
-      ` 
-      :
-      css ` color: #929292;
-      background: #E4E4E4;
-      ` ;
-    }}
-  }  
-
-  &:hover {
-    background-color:  #223440;
-    color: #f2f2f2;
-  }
+    &:hover {
+      background-color:  #223440;
+      color: #f2f2f2;
+    }
 
 `;
 
@@ -152,31 +140,37 @@ const Icons = styled.div`
   display: inline;
 `;
 
-function Intro() {
+const View1 = styled.div`
+  position: absolute;
+  width: 100%;
+  height: auto;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+  display: inline;
+`;
 
-  const [change1, setOn1] = useState(true);
-  const [change2, setOn2] = useState(false);
+
+function Intro() {
   const [select, setSelection] = useState("Edu");
 
-  const onToggle = () => {
-    
-    setOn1(!change1);  setOn2(!change2);
-    if(select==="Edu"){
-      setSelection("Certi");
-    }else{ setSelection("Edu");}
-    console.log('change1 : '+change1);
-    console.log('change2 : '+change2);
-    console.log('select : '+select);
+  const onToggle1 = () => {
+    setSelection("Edu");
   }
 
+  const onToggle2 = () => {
+    setSelection("Certi");
+  }
 
     return (
       <div className="IntroBg">
         <IntroRecord>
-          <SelectButton selection="Edu" change1 onClick={onToggle}>학력</SelectButton>
-          <SelectButton selection="Certi" change2  onClick={onToggle}>자격증</SelectButton>
+          <SelectButton selection="Edu"  oncolor={true} change1 onClick={onToggle1}>학력</SelectButton>
+          <SelectButton selection="Certi" oncolor={false} change2  onClick={onToggle2}>자격증</SelectButton>
           <EduCertiDiv>
-            <IntroList select/>
+            <View1 selection ={select}>
+            <IntroList select={select}/>
+            </View1>
           </EduCertiDiv>
         </IntroRecord>
         <Introself>

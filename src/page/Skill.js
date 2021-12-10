@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from "styled-components";
+import SkillList from './List/SkillList';
+
 
 const Skillbg = styled.div`
       position: absolute;
@@ -12,14 +14,14 @@ const Skillbg = styled.div`
 
 const SkillTitle = styled.text`
       position: absolute;
-      width: 50vw;
+      width: auto;
       height: 10vh;
-      right: 8vw;
-      top:5vh;
+      right:15.5vw;
+      top:20px;
       font-family: Righteous;
       font-style: normal;
       font-weight: normal;
-      font-size: 48px;
+      font-size: 46px;
       line-height: 80px;
       color: #FFFFFF;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -28,10 +30,10 @@ const SkillTitle = styled.text`
 
 const SkillLine = styled.text`
     position: absolute;
-    width: 50vw;
+    width: 45vw;
     height: 2px;
     right:15.5vw;
-    top:17.5vh;
+    top:95px;
     background: #FFFFFF;
     border: none;
 
@@ -41,9 +43,9 @@ const SkillMain = styled.div`
       position: absolute;
       width: 70vw;
       height: 60vh;
-      left: 15vw;
-      top: 20vh;
-
+      left: 50%;
+      transform: translateX(-50%);
+      top:110px;
       background: #FFFFFF;
       box-sizing: border-box;
       box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.25);
@@ -53,29 +55,38 @@ const SkillMain = styled.div`
 const SkillMainTitle = styled.text`
     position: absolute;
     width: 70vw;
-    height: 53px;
+    height: 10vh;
+    text-align: center;
+    font-family: Righteous;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 10vh;
     left: 0;
+    color: #7A64FF;
     top: 0;
-
     background: #FFFFFF;
     box-sizing: border-box;
     box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    color: ${props => props.color};
 `;
 
-class Skill extends Component{
-    render(){
+function Skill () {
+      const TitleText = "dev language";
+      const color = '#7A64FF';
       console.log('Skill render');
       return(
           <Skillbg>
             <SkillTitle>TOOL / Language SKILL</SkillTitle>
             <SkillLine/>
             <SkillMain>
-              <SkillMainTitle/>
+              <SkillMainTitle color={color}> {TitleText} </SkillMainTitle>
+              <SkillList color={color} />
             </SkillMain>
           </Skillbg>
       );
     }
-  }
+
 
   export default Skill;
