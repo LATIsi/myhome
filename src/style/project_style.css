@@ -24,13 +24,8 @@
   font-weight: normal;
   font-size: 22px;
   text-align: right;
-  color: #373737;
+  color: #5c5c5c;
   margin-bottom: 70px;
   text-decoration: underline;
   text-underline-position: under;
-}
-
-.ProjectLinkText a:hover {
-  color: royalblue;
-  text-decoration: none;
 }

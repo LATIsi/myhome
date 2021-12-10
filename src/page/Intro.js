@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled , { css } from "styled-components";
 import "../style/Intro_style.css";
 import "../App.css";
 import IntroList from "./List/IntroList";
@@ -105,12 +105,38 @@ const EduCertiDiv = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
-const EduButton = styled.button`
-  left: 10%;
-`;
+const SelectButton = styled.button`
+    position: absolute;
+    top: 8%;
+    width: 12%;
+    height: 80px;
+    left:10%;
+    border: none;
+    padding-bottom: 35px;
+    font-family: "Noto Sans KR";
+    border-radius: 20px;
 
-const CertiButton = styled.button`
-  left: 22%;
+    & + Button {
+      margin-left: 7.8vw;
+    }
+
+    ${({ on }) => {
+      return on ?
+      css ` color: #223440;
+      background: #f2f2f2;
+      ` 
+      :
+      css ` color: #929292;
+      background: #E4E4E4;
+      ` ;
+    }}
+  }  
+
+  &:hover {
+    background-color:  #223440;
+    color: #f2f2f2;
+  }
+
 `;
 
 const IntroSelfDownText =
@@ -126,15 +152,31 @@ const Icons = styled.div`
   display: inline;
 `;
 
-class Intro extends Component {
-  render() {
+function Intro() {
+
+  const [change1, setOn1] = useState(true);
+  const [change2, setOn2] = useState(false);
+  const [select, setSelection] = useState("Edu");
+
+  const onToggle = () => {
+    
+    setOn1(!change1);  setOn2(!change2);
+    if(select==="Edu"){
+      setSelection("Certi");
+    }else{ setSelection("Edu");}
+    console.log('change1 : '+change1);
+    console.log('change2 : '+change2);
+    console.log('select : '+select);
+  }
+
+
     return (
       <div className="IntroBg">
         <IntroRecord>
-          <EduButton className="IntroButton">학력</EduButton>
-          <CertiButton className="IntroButton">자격증</CertiButton>
+          <SelectButton selection="Edu" change1 onClick={onToggle}>학력</SelectButton>
+          <SelectButton selection="Certi" change2  onClick={onToggle}>자격증</SelectButton>
           <EduCertiDiv>
-            <IntroList />
+            <IntroList select/>
           </EduCertiDiv>
         </IntroRecord>
         <Introself>
@@ -174,7 +216,6 @@ class Intro extends Component {
         wellcome to intro!
       </div>
     );
-  }
 }
 
 export default Intro;
