@@ -71,10 +71,12 @@ const SkillMainTitle = styled.text`
     border-radius: 20px;
     color: ${props => props.color};
 `;
+//https://github.com/react-icons/react-icons 참고.
 
 function Skill () {
       const TitleText = "dev language";
       const color = '#7A64FF';
+      const SkillSelect = "DevLanguage";
       console.log('Skill render');
       return(
           <Skillbg>
@@ -82,7 +84,7 @@ function Skill () {
             <SkillLine/>
             <SkillMain>
               <SkillMainTitle color={color}> {TitleText} </SkillMainTitle>
-              <SkillList color={color} />
+              <SkillList color={color} select={SkillSelect} />
             </SkillMain>
           </Skillbg>
       );
