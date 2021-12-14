@@ -82,7 +82,60 @@
   color: white;
 }
 
-.ProjectItem_content {
+.SkillItem {
+  position: absolute;
+  bottom: 7%;
+  font-family: Noto Sans KR, sans-serif;
+  color: white;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.SkillItem_img {
+  position: absolute;
+  bottom: 7%;
+  font-family: Noto Sans KR, sans-serif;
+  color: white;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.SkillItem_collect {
+  position: absolute;
+  bottom: 7%;
+  font-family: Noto Sans KR, sans-serif;
+  color: white;
+  font-size: 12px;
+  line-height: 12px;
+}
+.SkillItem_name {
+  position: absolute;
+  bottom: 7%;
+  font-family: Noto Sans KR, sans-serif;
+  color: white;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.SkillItem_pro {
+  position: absolute;
+  bottom: 7%;
+  font-family: Noto Sans KR, sans-serif;
+  color: white;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.SkillItem_Gauge {
+  position: absolute;
+  bottom: 7%;
+  font-family: Noto Sans KR, sans-serif;
+  color: white;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.SkillItem_Gauge_bg {
   position: absolute;
   bottom: 7%;
   font-family: Noto Sans KR, sans-serif;

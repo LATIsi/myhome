@@ -46,10 +46,11 @@ const SkillMain = styled.div`
       left: 50%;
       transform: translateX(-50%);
       top:110px;
-      background: #FFFFFF;
+      background: white;
       box-sizing: border-box;
       box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
+      overflow: hidden;
 `;
 
 const SkillMainTitle = styled.text`

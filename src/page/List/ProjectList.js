@@ -74,25 +74,32 @@ class ProjectList extends Component{
 
       return(
         <ProjectlistBlock>
-        {select === "team" ? TeamContent.map(Item => (
-           <ProjectItem
-           key={Item.id}
-           id={Item.id}
-           img={Item.img}
-           alt={Item.alt}
-           day={Item.day}
-           desc={Item.desc}
-           select={Item.select}/>
-        )) : PersonalContent.map(Item => (
-          <ProjectItem
-          key={Item.id}
-          id={Item.id}
-          img={Item.img}
-          alt={Item.alt}
-          day={Item.day}
-          desc={Item.desc}
-          select={Item.select}/>
-       )) }
+        {
+          { 
+            team : TeamContent.map(Item => (
+              <ProjectItem
+              key={Item.id}
+              id={Item.id}
+              img={Item.img}
+              alt={Item.alt}
+              day={Item.day}
+              desc={Item.desc}
+              select={Item.select}/>
+           ))
+            ,
+            personal :  PersonalContent.map(Item => (
+              <ProjectItem
+              key={Item.id}
+              id={Item.id}
+              img={Item.img}
+              alt={Item.alt}
+              day={Item.day}
+              desc={Item.desc}
+              select={Item.select}/>
+           )) 
+          }[select]
+        }
+
      </ProjectlistBlock>
       );
     }
