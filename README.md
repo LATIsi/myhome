@@ -7,7 +7,8 @@ myhome
 
 React-router-dom 라이브러리를 설치하여 만들었습니다.  
 react를 배포하기위해 gh-pages 라이브러리를 설치하였습니다.  
-js안에 css를 넣기위해 styled-components 라이브러리를 설치하였습니다.
+js안에 css를 넣기위해 styled-components 라이브러리를 설치하였습니다.  
+(호버 기능을 css적으로 편리하게 넣기위해 사용했습니다.)
 
 ---
 
@@ -41,6 +42,8 @@ js안에 css를 넣기위해 styled-components 라이브러리를 설치하였�
 0.1.2.5 - 인트로 완성 (현재 무슨 탭을 선택했는지의 css 만 남음)
 
 0.1.3.1 - Skill 배열 완성 (css 작업, JS 기본기능 만들어보기)  
-0.1.3.2 - Skill 배열 분류 완료
+0.1.3.2 - Skill 배열 분류 완료  
+0.1.3.3 - Skill 배열 css 완료(hover시 색 바뀌는것도 포함)  
+0.1.3.4 - Skill 배열 페이지 구분하기 완료
 
 -- 넓이에 따라 컨텐츠 배치랑 푸터 조절하기.

@@ -17,21 +17,21 @@ const SKillCotent = [
     select:'DevLanguage',
     img: <GrJava/>,
     name: 'JAVA',
-    gauge: 85
+    gauge: 65
   },
   {
     id: 2,
     select:'DevLanguage',
     img: <SiJavascript/>,
     name: 'JavaScript',
-    gauge: 60
+    gauge: 65
   },
   {
     id: 3,
     select:'DevLanguage',
     img: <SiCss3/>,
     name: 'HTML / css',
-    gauge: 70
+    gauge: 80
   },
   {
     id: 4,
@@ -94,7 +94,7 @@ const SKillCotent = [
     select:'DevTool',
     img: <AiFillGithub/>,
     name: 'git (github)',
-    gauge: 70
+    gauge: 60
   },
   {
     id: 13,
@@ -108,7 +108,7 @@ const SKillCotent = [
     select:'DevServer',
     img: <SiLinux/>,
     name: 'Linux (db, virtual machine server)',
-    gauge: 85
+    gauge: 65
   },
   {
     id: 15,
@@ -128,19 +128,21 @@ const SKillCotent = [
 ];
 
 const SkilllistBlock = styled.div`
-    width: 100%;
-    height: 83%;
-    margin-top:10vh;
+    position: absolute;
+    width: 80%;
+    height: 40vh;
+    bottom : 4vh;
     float: left;
     display: grid;
-    padding : 10px;
-    grid-template-columns: 2fr 1fr;
-    background-color:red;
+    left: 50%;
+    grid-column-gap: 30px;
+    transform: translateX(-50%);
+    grid-template-columns:  1fr 1fr;
 `;
 
 class SkillList extends Component{
      render(){
-       const {select} = this.props;
+       const {select, color} = this.props;
        const DevLanguageContent =  SKillCotent.filter(Item => ('DevLanguage' === Item.select));
        const DesignToolContent =  SKillCotent.filter(Item => ('DesignTool' === Item.select));
        const DevToolContent =  SKillCotent.filter(Item => ('DevTool' === Item.select));
@@ -158,6 +160,7 @@ class SkillList extends Component{
               img={Item.img}
               name={Item.name}
               gauge={Item.gauge}
+              color={color}
               />))
             ,
             DesignTool : DesignToolContent.map(Item => (
@@ -168,6 +171,7 @@ class SkillList extends Component{
               img={Item.img}
               name={Item.name}
               gauge={Item.gauge}
+              color={color}
               />))
               ,
             DevTool :DevToolContent.map(Item => (
@@ -178,6 +182,7 @@ class SkillList extends Component{
               img={Item.img}
               name={Item.name}
               gauge={Item.gauge}
+              color={color}
               />))
               ,
             DevServer : DevServerContent.map(Item => (
@@ -188,6 +193,7 @@ class SkillList extends Component{
               img={Item.img}
               name={Item.name}
               gauge={Item.gauge}
+              color={color}
               />))
           }[select]
         }

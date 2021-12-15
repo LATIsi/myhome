@@ -83,63 +83,43 @@
 }
 
 .SkillItem {
-  position: absolute;
-  bottom: 7%;
-  font-family: Noto Sans KR, sans-serif;
-  color: white;
-  font-size: 12px;
-  line-height: 12px;
-}
-
-.SkillItem_img {
-  position: absolute;
-  bottom: 7%;
-  font-family: Noto Sans KR, sans-serif;
-  color: white;
-  font-size: 12px;
-  line-height: 12px;
+  position: relative;
+  width: 95%;
+  height: 90%;
 }
 
 .SkillItem_collect {
   position: absolute;
-  bottom: 7%;
-  font-family: Noto Sans KR, sans-serif;
-  color: white;
-  font-size: 12px;
-  line-height: 12px;
+  right: 0;
+  width: 70%;
+  height: 100%;
 }
 .SkillItem_name {
   position: absolute;
-  bottom: 7%;
-  font-family: Noto Sans KR, sans-serif;
-  color: white;
-  font-size: 12px;
-  line-height: 12px;
+  top: 5px;
+  position: absolute;
+  width: 80%;
+  height: auto;
+  font-family: Righteous;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+
+  color: #000000;
 }
 
 .SkillItem_pro {
   position: absolute;
-  bottom: 7%;
-  font-family: Noto Sans KR, sans-serif;
-  color: white;
-  font-size: 12px;
-  line-height: 12px;
-}
-
-.SkillItem_Gauge {
-  position: absolute;
-  bottom: 7%;
-  font-family: Noto Sans KR, sans-serif;
-  color: white;
-  font-size: 12px;
-  line-height: 12px;
-}
-
-.SkillItem_Gauge_bg {
-  position: absolute;
-  bottom: 7%;
-  font-family: Noto Sans KR, sans-serif;
-  color: white;
-  font-size: 12px;
-  line-height: 12px;
+  width: 20%;
+  height: auto;
+  right: 0;
+  top: 16px;
+  text-align: right;
+  font-family: Righteous;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #000000;
 }

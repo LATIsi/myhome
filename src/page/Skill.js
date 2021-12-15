@@ -87,6 +87,7 @@ function Skill () {
               <SkillMainTitle color={color}> {TitleText} </SkillMainTitle>
               <SkillList color={color} select={SkillSelect} />
             </SkillMain>
+            
           </Skillbg>
       );
     }
