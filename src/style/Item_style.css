@@ -82,6 +82,15 @@
   color: white;
 }
 
+.ProjectItem_content {
+  position: absolute;
+  bottom: 7%;
+  font-family: Noto Sans KR, sans-serif;
+  color: white;
+  font-size: 12px;
+  line-height: 12px;
+}
+
 .SkillItem {
   position: relative;
   width: 95%;
@@ -98,14 +107,13 @@
   position: absolute;
   top: 5px;
   position: absolute;
-  width: 80%;
+  width: 87%;
   height: auto;
   font-family: Righteous;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
-  line-height: 30px;
-
+  line-height: 28px;
   color: #000000;
 }
 

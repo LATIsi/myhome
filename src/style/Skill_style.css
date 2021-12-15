@@ -1,0 +1,13 @@
+.SkillButton_div {
+  position: absolute;
+  width: auto;
+  height: 15px;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.SkillButton {
+  position: relative;
+  background: azure;
+}

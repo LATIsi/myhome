@@ -1,12 +1,12 @@
-import React from 'react';
+import React , { useState } from "react";
 import styled from "styled-components";
 import SkillList from './List/SkillList';
-
+import "../style/Skill_style.css";
 
 const Skillbg = styled.div`
       position: absolute;
       width:100vw;
-      height: 100vh;
+      height: auto;
       bottom:0;
       top:60px;
       background: #4BA4F2;
@@ -17,7 +17,7 @@ const SkillTitle = styled.text`
       width: auto;
       height: 10vh;
       right:15.5vw;
-      top:20px;
+      top:10px;
       font-family: Righteous;
       font-style: normal;
       font-weight: normal;
@@ -33,19 +33,18 @@ const SkillLine = styled.text`
     width: 45vw;
     height: 2px;
     right:15.5vw;
-    top:95px;
+    top:83px;
     background: #FFFFFF;
     border: none;
-
 `;
 
 const SkillMain = styled.div`
       position: absolute;
       width: 70vw;
-      height: 60vh;
+      height: 62vh;
       left: 50%;
       transform: translateX(-50%);
-      top:110px;
+      top:100px;
       background: white;
       box-sizing: border-box;
       box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.25);
@@ -72,13 +71,56 @@ const SkillMainTitle = styled.text`
     border-radius: 20px;
     color: ${props => props.color};
 `;
+
+const SkillButton = styled.button`
+    width: 11px;
+    height: 12px;
+    border: none;
+    border-radius: 8px;
+    background:white;
+    & + & {
+      margin-left: 3vw;
+    }
+
+    &:hover {
+      background-color: #C4C4C4;
+    }
+
+`;
+
+
 //https://github.com/react-icons/react-icons 참고.
 
 function Skill () {
-      const TitleText = "dev language";
-      const color = '#7A64FF';
-      const SkillSelect = "DevLanguage";
-      console.log('Skill render');
+
+      const [color, setColor] = useState("#7A64FF");
+      const [TitleText, setTitleText] = useState("Dev language");
+      const [SkillSelect, setSkillSelect] = useState("DevLanguage");
+      
+      const skCheck1 = () => {
+            setColor("#7A64FF");
+            setTitleText("Dev Language");
+            setSkillSelect("DevLanguage");
+      }
+    
+      const skCheck2 = () => {
+            setColor("#1166FF");
+            setTitleText("Design tool");
+            setSkillSelect("DesignTool");
+      }
+
+      const skCheck3 = () => {
+            setColor("#2EBBA2");
+            setTitleText("Dev Tool");
+            setSkillSelect("DevTool");
+      }
+        
+      const skCheck4 = () => {
+            setColor("#E99C2E");
+            setTitleText("Dev Server");
+            setSkillSelect("DevServer");
+      }
+
       return(
           <Skillbg>
             <SkillTitle>TOOL / Language SKILL</SkillTitle>
@@ -87,7 +129,12 @@ function Skill () {
               <SkillMainTitle color={color}> {TitleText} </SkillMainTitle>
               <SkillList color={color} select={SkillSelect} />
             </SkillMain>
-            
+            <div className="SkillButton_div">
+            <SkillButton className="SkillButton" onClick={skCheck1} incheck={false}/>
+            <SkillButton className="SkillButton" onClick={skCheck2} incheck={false}/>
+            <SkillButton className="SkillButton" onClick={skCheck3} incheck={false}/>
+            <SkillButton className="SkillButton" onClick={skCheck4} incheck={false}/>
+            </div>
           </Skillbg>
       );
     }

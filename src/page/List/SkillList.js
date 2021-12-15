@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import '../../style/Item_style.css';
 import SkillItem from '../Items/SkillItem';
 import styled from "styled-components";
-import { GrJava, GrAndroid } from 'react-icons/gr';
+import {GrAndroid } from 'react-icons/gr';
 import { SiJavascript , SiCss3 , SiReact, SiAdobephotoshop, SiAdobeillustrator,
-   SiPhpmyadmin,SiFirebase, SiLinux, SiEclipseide, SiVisualstudiocode} from 'react-icons/si';
+   SiPhpmyadmin,SiFirebase, SiLinux, SiEclipseide, SiJava, SiVisualstudiocode} from 'react-icons/si';
 import { AiOutlineConsoleSql ,AiFillGithub} from 'react-icons/ai';
 import { GiZeppelin } from 'react-icons/gi';
 import { FiFigma } from 'react-icons/fi';
@@ -15,7 +15,7 @@ const SKillCotent = [
   {
     id: 1,
     select:'DevLanguage',
-    img: <GrJava/>,
+    img: <SiJava/>,
     name: 'JAVA',
     gauge: 65
   },
@@ -44,14 +44,14 @@ const SKillCotent = [
     id: 5,
     select:'DevLanguage',
     img: <SiReact/>,
-    name: 'react',
+    name: 'React',
     gauge: 40
   },
   {
     id: 6,
     select:'DesignTool',
     img: <SiAdobephotoshop/>,
-    name: 'photoshop',
+    name: 'Photoshop',
     gauge: 85
   },
   {
@@ -65,28 +65,28 @@ const SKillCotent = [
     id: 8,
     select:'DesignTool',
     img: <GiZeppelin/>,
-    name: 'zeppelin',
+    name: 'Zeppelin',
     gauge: 85
   },
   {
     id: 9,
     select:'DesignTool',
     img: <FiFigma/>,
-    name: 'figma',
+    name: 'Figma',
     gauge: 75
   },
   {
     id: 10,
     select:'DevTool',
     img: <GrAndroid/>,
-    name: 'androidStudio',
+    name: 'Android Studio',
     gauge: 85
   },
   {
     id: 11,
     select:'DevTool',
     img: <SiEclipseide/>,
-    name: 'eclipse',
+    name: 'Eclipse',
     gauge: 60
   },
   {
@@ -100,14 +100,14 @@ const SKillCotent = [
     id: 13,
     select:'DevTool',
     img: <SiVisualstudiocode/>,
-    name: 'Visual Studio Code',
+    name: 'VSCode',
     gauge: 50
   },
   {
     id: 14,
     select:'DevServer',
     img: <SiLinux/>,
-    name: 'Linux (db, virtual machine server)',
+    name: 'Linux / Fedora24',
     gauge: 65
   },
   {

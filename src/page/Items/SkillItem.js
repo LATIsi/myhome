@@ -20,7 +20,7 @@ const SkillItemGauge = styled.div`
     top: 40px;
     height: 10px;
     border-radius: 10px;
-    background-color: #7A64FF;
+    background-color: ${props => props.color};
     z-index:2;
     width: ${props => props.gaugePro}%;
 `;
@@ -43,7 +43,7 @@ const SkillItemGaugeBg = styled.div`
             <div className='SkillItem_collect'>
             <div className="SkillItem_name">{name}</div>
             <div className="SkillItem_pro">{gauge}%</div>
-            <SkillItemGauge gaugePro={gauge}></SkillItemGauge>
+            <SkillItemGauge gaugePro={gauge} color={color}></SkillItemGauge>
             <SkillItemGaugeBg/>
         </div>
       </div>
