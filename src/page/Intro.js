@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from "styled-components";
+import styled , {css} from "styled-components";
 import "../style/Intro_style.css";
 import "../App.css";
 import IntroList from "./List/IntroList";
@@ -99,30 +99,40 @@ const EduCertiDiv = styled.div`
   position: absolute;
   width: 51vw;
   height: 65vh;
-  left: 10%;
-  top: 15%;
+  left:50%;
+  transform: translateX(-50%);
+  top: 16vh;
   background: #f2f2f2;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 const SelectButton = styled.button`
     position: absolute;
-    top: 8%;
-    width: 12%;
+    top: 8vh;
+    width: 10vw;
     height: 80px;
-    left:10%;
+    left:18.5%;
+    transform: translateX(-50%);
     border: none;
-    padding-bottom: 35px;
+    padding-top: 2vh;
+    padding-bottom: 10vh;
     font-family: "Noto Sans KR";
-    border-radius: 20px;
+    border-radius: 1.3vw;
 
     & + Button {
-      margin-left: 7.8vw;
+      margin-left:10vw;
     }
 
     &:hover {
       background-color:  #223440;
       color: #f2f2f2;
+    }
+    
+    ${props => props.oncolor &&
+      css`
+           background-color: #E4E4E4;
+           color:#929292;
+      `}
     }
 
 `;
@@ -153,20 +163,26 @@ const View1 = styled.div`
 
 function Intro() {
   const [select, setSelection] = useState("Edu");
+  const [oncolor1, setOnColor1] = useState(false);
+  const [oncolor2, setOnColor2] = useState(true);
 
   const onToggle1 = () => {
     setSelection("Edu");
+    setOnColor1(false);
+    setOnColor2(true);
   }
 
   const onToggle2 = () => {
     setSelection("Certi");
+    setOnColor1(true);
+    setOnColor2(false);
   }
 
     return (
       <div className="IntroBg">
         <IntroRecord>
-          <SelectButton selection="Edu"  oncolor={true} change1 onClick={onToggle1}>학력</SelectButton>
-          <SelectButton selection="Certi" oncolor={false} change2  onClick={onToggle2}>자격증</SelectButton>
+          <SelectButton selection="Edu"  oncolor={oncolor1} change1 onClick={onToggle1}>학력</SelectButton>
+          <SelectButton selection="Certi" oncolor={oncolor2} change2  onClick={onToggle2}>자격증</SelectButton>
           <EduCertiDiv>
             <View1 selection ={select}>
             <IntroList select={select}/>
@@ -185,7 +201,7 @@ function Intro() {
               >
                 <AiFillGithub size="30" />
               </a>
-              <a
+              {/* <a
                 href="https://github.com/LATIsi"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -198,7 +214,7 @@ function Intro() {
                 rel="noopener noreferrer"
               >
                 <AiFillGithub size="30" />
-              </a>
+              </a> */}
             </Icons>
           </IntroselfTop>
           <div className="intro_Picture"></div>
@@ -207,7 +223,6 @@ function Intro() {
             <IntroselfText>{IntroSelfDownText}</IntroselfText>
           </IntroselfDown>
         </Introself>
-        wellcome to intro!
       </div>
     );
 }

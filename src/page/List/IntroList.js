@@ -19,7 +19,7 @@ const IntroEduCotent = [
   {
     id: 3,
     day: '2021.10 - now',
-    desc: 'react / JS 책을 활용해 \n 클론 코딩이나 간단한 TOY 프로젝트를 하고 개선점을 찾아가는 중  ',
+    desc: 'react / JS 책을 활용해 클론 코딩, \n 간단한 TOY 프로젝트를 하며 개선점을 찾아가는 중  ',
     edu: 'Edu'
   },
   {

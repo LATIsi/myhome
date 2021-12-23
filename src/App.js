@@ -4,9 +4,9 @@ import Project from './page/Project';
 import Home from './page/Home';
 import Intro from './page/Intro';
 import './style/nav_style.css';
-import {Route, Switch, BrowserRouter} from 'react-router-dom';
+import {Route, Switch, BrowserRouter, Link} from 'react-router-dom';
 import styled from "styled-components";
-
+import { HiMenu } from "react-icons/hi";
 
 const Content = styled.div`
 overflow-y:auto;
@@ -19,25 +19,26 @@ width: 100%;
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename="/myhome">
+      <BrowserRouter>
       <nav className="navbar">
       <div className="nav_text">MINJI's PROPOPOL</div>
       <div className="nav_menu">
+          {/* <HiMenu/> */}
           <ul>
-            <li><a href="/project">PROJECT</a></li>
-            <li><a href="/skill">SKILL</a></li>           
-            <li><a href="/intro">INTRO</a></li>
-            <li><a href="/home">HOME</a></li>
+            <li><Link to="/myhome/project">PROJECT</Link></li>
+            <li><Link to="/myhome/skill">SKILL</Link></li>           
+            <li><Link to="/myhome/intro">INTRO</Link></li>
+            <li><Link to="/myhome/home">HOME</Link></li>
           </ul>
         </div>
       </nav>
       <Content>
       <Switch>
-      <Route path="/home" exact><Home>home</Home></Route>
-      <Route path="/intro"><Intro>intro</Intro></Route>
-      <Route path="/skill"><Skill>skill</Skill></Route>
-      <Route path="/project"><Project>project</Project></Route>
-      <Route path="/" ><Home>home</Home></Route>
+      <Route path="/myhome/home" exact><Home>home</Home></Route>
+      <Route path="/myhome/intro"><Intro>intro</Intro></Route>
+      <Route path="/myhome/skill"><Skill>skill</Skill></Route>
+      <Route path="/myhome/project"><Project>project</Project></Route>
+      <Route path="/myhome/" ><Home>home</Home></Route>
       </Switch>
       </Content>
       </BrowserRouter>

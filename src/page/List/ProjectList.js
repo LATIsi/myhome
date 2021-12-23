@@ -61,7 +61,8 @@ const ProjectlistBlock = styled.div`
     height: 100%;
     float: left;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    z-index: 1;
+    grid-template-columns: 1fr 1fr;
     margin-top: 20px;
     margin-bottom: 20px;
 `;

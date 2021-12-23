@@ -25,6 +25,7 @@
   font-size: 22px;
   text-align: right;
   color: #5c5c5c;
+  z-index: 2;
   margin-bottom: 70px;
   text-decoration: underline;
   text-underline-position: under;

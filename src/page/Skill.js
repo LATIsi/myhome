@@ -1,5 +1,5 @@
 import React , { useState } from "react";
-import styled from "styled-components";
+import  styled, {css} from "styled-components";
 import SkillList from './List/SkillList';
 import "../style/Skill_style.css";
 
@@ -78,11 +78,21 @@ const SkillButton = styled.button`
     border: none;
     border-radius: 8px;
     background:white;
+
+    ${props => props.incheck &&
+      css`
+           background-color: #C4C4C4;
+      `}
+    }
+
     & + & {
       margin-left: 3vw;
     }
 
     &:hover {
+      ${props => props.incheck} {
+            background-color: #C4C4C4;
+          }
       background-color: #C4C4C4;
     }
 
@@ -96,29 +106,49 @@ function Skill () {
       const [color, setColor] = useState("#7A64FF");
       const [TitleText, setTitleText] = useState("Dev language");
       const [SkillSelect, setSkillSelect] = useState("DevLanguage");
+      const [incheck1, setInCheck1] = useState(true);
+      const [incheck2, setInCheck2] = useState(false);
+      const [incheck3, setInCheck3] = useState(false);
+      const [incheck4, setInCheck4] = useState(false);
       
       const skCheck1 = () => {
             setColor("#7A64FF");
             setTitleText("Dev Language");
             setSkillSelect("DevLanguage");
+            setInCheck1(true);
+            setInCheck2(false);
+            setInCheck3(false);
+            setInCheck4(false);
       }
     
       const skCheck2 = () => {
             setColor("#1166FF");
             setTitleText("Design tool");
             setSkillSelect("DesignTool");
+            setInCheck1(false);
+            setInCheck2(true);
+            setInCheck3(false);
+            setInCheck4(false);
       }
 
       const skCheck3 = () => {
             setColor("#2EBBA2");
             setTitleText("Dev Tool");
             setSkillSelect("DevTool");
+            setInCheck1(false);
+            setInCheck2(false);
+            setInCheck3(true);
+            setInCheck4(false);
       }
         
       const skCheck4 = () => {
             setColor("#E99C2E");
             setTitleText("Dev Server");
             setSkillSelect("DevServer");
+            setInCheck1(false);
+            setInCheck2(false);
+            setInCheck3(false);
+            setInCheck4(true);
       }
 
       return(
@@ -130,10 +160,10 @@ function Skill () {
               <SkillList color={color} select={SkillSelect} />
             </SkillMain>
             <div className="SkillButton_div">
-            <SkillButton className="SkillButton" onClick={skCheck1} incheck={false}/>
-            <SkillButton className="SkillButton" onClick={skCheck2} incheck={false}/>
-            <SkillButton className="SkillButton" onClick={skCheck3} incheck={false}/>
-            <SkillButton className="SkillButton" onClick={skCheck4} incheck={false}/>
+            <SkillButton className="SkillButton" onClick={skCheck1} incheck={incheck1}/>
+            <SkillButton className="SkillButton" onClick={skCheck2} incheck={incheck2}/>
+            <SkillButton className="SkillButton" onClick={skCheck3} incheck={incheck3}/>
+            <SkillButton className="SkillButton" onClick={skCheck4} incheck={incheck4}/>
             </div>
           </Skillbg>
       );
