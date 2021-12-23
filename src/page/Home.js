@@ -8,7 +8,6 @@ const HomeMax = styled.div`
       height: 100vh;
       left:38vw;
       bottom:0;
-      top:60px;
       background: rgba(0, 0, 0, 0.8);
 `;
 
@@ -16,23 +15,23 @@ const Hometitle = styled.div`
       position: absolute;
       font-family: Righteous;
       font-style: normal;
-      top:37vh;
+      top:38vh;
       left:45vw;
       font-weight: normal;
-      font-size: 64px;
-      line-height: 79px;
+      font-size: 11vh;
+      line-height: 11vh;
       color:white;
 `;
 
 const Homedes = styled.div`
       position: absolute;
-      top:47vh;
+      top:52vh;
       left:45vw;
       font-family: NATS;
       font-style: normal;
       font-weight: normal;
-      font-size: 48px;
-      line-height: 101px;
+      font-size: 8vh;
+      line-height: 8vh;
       color:white;
 `;
 

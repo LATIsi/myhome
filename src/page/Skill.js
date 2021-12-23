@@ -6,9 +6,8 @@ import "../style/Skill_style.css";
 const Skillbg = styled.div`
       position: absolute;
       width:100vw;
-      height: auto;
+      height: 100vh;
       bottom:0;
-      top:60px;
       background: #4BA4F2;
 `;
 
@@ -17,7 +16,7 @@ const SkillTitle = styled.text`
       width: auto;
       height: 10vh;
       right:15.5vw;
-      top:10px;
+      Bottom:77vh;
       font-family: Righteous;
       font-style: normal;
       font-weight: normal;
@@ -33,7 +32,7 @@ const SkillLine = styled.text`
     width: 45vw;
     height: 2px;
     right:15.5vw;
-    top:83px;
+    Bottom:74vh;
     background: #FFFFFF;
     border: none;
 `;
@@ -44,7 +43,7 @@ const SkillMain = styled.div`
       height: 62vh;
       left: 50%;
       transform: translateX(-50%);
-      top:100px;
+      bottom:10vh;
       background: white;
       box-sizing: border-box;
       box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.25);

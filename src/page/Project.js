@@ -31,15 +31,15 @@ transform: translateX(-50%);
 
 const ProjectTopText = styled.text`
 position: absolute;
-width: 161px;
-height: 60px;
+width: auto;
+height: auto;
 right: 0;
-top: 50px;
+top:12vh;
 font-family: Righteous;
 font-style: normal;
 font-weight: normal;
-font-size: 48px;
-line-height: 60px;
+font-size: 8vh;
+line-height: 8vh;
 /* identical to box height */
 color: #000000;
 `;
@@ -47,12 +47,12 @@ color: #000000;
 const ProjectTopTextDesc = styled.text`
 position: relative;
 width: 100%;
-height: 30px;
+height: auto;
 left:5%;
 font-family: 'Noto Sans KR';
 font-style: normal;
 font-weight: normal;
-font-size: 16px;
+font-size: 3vh;
 text-align: left;
 color: #000000;
 `;
@@ -62,7 +62,7 @@ position: absolute;
 width: 50vw;
 height: 3px;
 right:-10px;
-top: 110px;
+top:21vh;
 background:#E1E1E1;
 border: none;
 `;
@@ -98,7 +98,7 @@ transform: translateX(-50%);
 const ProjectBg2 = styled.div`
 position: absolute;
 width: 140vw;
-height:200px;
+height:30vh;
 left:-50%;
 bottom:0;
 background: linear-gradient(0deg, rgba(73, 73, 73, 0.08) 17.28%,
@@ -109,7 +109,6 @@ rgba(181, 181, 181, 0.06) 54.77%, rgba(255, 255, 255, 0) 83.18%);
 
 class Project extends Component{
     render(){
-
       return(
         <>
         <ProjectScroll>

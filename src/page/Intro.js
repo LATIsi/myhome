@@ -23,9 +23,9 @@ const Introself = styled.div`
 
 const IntroselfTop = styled.div`
   width: 17vw;
-  height: 22vh;
+  height: 18vh;
   position: absolute;
-  right: 17vw;
+  right: 16vw;
   top: 15%;
 `;
 
@@ -39,31 +39,31 @@ const IntroselfDown = styled.div`
 
 const Name = styled.text`
   position: absolute;
-  width: 233px;
-  height: 54px;
+  width: auto;
+  height: auto;
   right: 0;
-  top: 0;
+  top: 1vh;
 
   font-family: Righteous;
   font-style: normal;
   font-weight: normal;
-  font-size: 42px;
-  line-height: 60px;
+  font-size: 8vh;
+  line-height: 8vh;
   text-align: right;
   color: #000000;
 `;
 
 const Birthday = styled.text`
   position: absolute;
-  width: 233px;
-  height: 63px;
+  width: auto;
+  height: auto;
   right: 0;
-  top: 7vh;
+  top: 10vh;
   font-family: Noto Sans KR;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 63px;
+  font-size: 3vh;
+  line-height: 3vh;
   text-align: right;
   color: #000000;
 `;
@@ -71,10 +71,10 @@ const Birthday = styled.text`
 const IntroHr1 = styled.hr`
   position: absolute;
   width: 28vw;
-  height: 1.5px;
+  height: 0.3vh;
   right: 10%;
-  top: 43%;
-  background: #011526;
+  top: 43vh;
+  background: #C8C8C8;
   border: none;
 `;
 
@@ -88,8 +88,8 @@ const IntroselfText = styled.text`
   font-family: Noto Sans KR, sans-serif;
   font-style: 300;
   font-weight: bord;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 2.5vh;
+  line-height: 3vh;
   /* or 133% */
   text-align: right;
   color: #223440;
@@ -110,12 +110,13 @@ const SelectButton = styled.button`
     position: absolute;
     top: 8vh;
     width: 10vw;
-    height: 80px;
+    height: 15vh;
+    
     left:18.5%;
+    font-size: 2.5vh;
     transform: translateX(-50%);
     border: none;
-    padding-top: 2vh;
-    padding-bottom: 10vh;
+    padding-bottom: 8vh;
     font-family: "Noto Sans KR";
     border-radius: 1.3vw;
 
@@ -142,10 +143,10 @@ const IntroSelfDownText =
 
 const Icons = styled.div`
   position: absolute;
-  width: 100%;
-  height: auto;
-  right: 0;
-  bottom: 0;
+  width: 2vh;
+  height: 1vh;
+  right: 1vw;
+  bottom: 2vh;
   text-align: right;
   display: inline;
 `;

@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <nav className="navbar">
-      <div className="nav_text">MINJI's PROPOPOL</div>
+      <div className="nav_Text">MINJI's PROPOPOL</div>
       <div className="nav_menu">
           {/* <HiMenu/> */}
           <ul>
