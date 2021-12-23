@@ -16,12 +16,12 @@ const SkillTitle = styled.text`
       width: auto;
       height: 10vh;
       right:15.5vw;
-      Bottom:77vh;
+      Bottom:73vh;
       font-family: Righteous;
       font-style: normal;
       font-weight: normal;
-      font-size: 46px;
-      line-height: 80px;
+      font-size: 8vh;
+      line-height: 8vh;
       color: #FFFFFF;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -30,9 +30,9 @@ const SkillTitle = styled.text`
 const SkillLine = styled.text`
     position: absolute;
     width: 45vw;
-    height: 2px;
+    height: 0.4vh;
     right:15.5vw;
-    Bottom:74vh;
+    Bottom:73.5vh;
     background: #FFFFFF;
     border: none;
 `;
@@ -47,7 +47,7 @@ const SkillMain = styled.div`
       background: white;
       box-sizing: border-box;
       box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 20px;
+      border-radius: 1vw;
       overflow: hidden;
 `;
 
@@ -59,7 +59,7 @@ const SkillMainTitle = styled.text`
     font-family: Righteous;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 5vh;
     line-height: 10vh;
     left: 0;
     color: #7A64FF;
@@ -67,15 +67,15 @@ const SkillMainTitle = styled.text`
     background: #FFFFFF;
     box-sizing: border-box;
     box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    border-radius: 1vw;
     color: ${props => props.color};
 `;
 
 const SkillButton = styled.button`
-    width: 11px;
-    height: 12px;
+    width: 1vw;
+    height: 1vw;
     border: none;
-    border-radius: 8px;
+    border-radius: 1vw;
     background:white;
 
     ${props => props.incheck &&

@@ -116,21 +116,21 @@
   font-family: Righteous;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5em;
+  font-size: 4vh;
   color: #000000;
 }
 
 .SkillItem_pro {
   position: absolute;
-  width: 20%;
+  width: auto;
   height: auto;
   right: 0;
-  top: 16px;
+  top: 3vh;
   text-align: right;
   font-family: Righteous;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 2.5vh;
+  line-height: 2.5vh;
   color: #000000;
 }

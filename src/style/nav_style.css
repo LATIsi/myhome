@@ -11,12 +11,12 @@
   z-index: 1;
 }
 
-.nav_text {
+.nav_Text {
   position: absolute;
   font-family: Righteous;
   font-style: normal;
   font-weight: normal;
-  font-size: 2vw;
+  font-size: 4.5vh;
   color: #000000;
 }
 

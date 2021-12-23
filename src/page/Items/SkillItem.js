@@ -4,11 +4,11 @@ import styled from "styled-components";
 
 const SkillItemImg = styled.div`
     position: absolute;
-    left:15px ;
-    width: 23%;
-    height: 100%;
+    left: 1.5vw;
+    width: 4vw;
+    height: 4vh;
     color: black;
-    font-size: 40px;
+    font-size: 8vh;
     text-align: center;
     &:hover {
       color: ${props => props.color};
@@ -17,9 +17,10 @@ const SkillItemImg = styled.div`
 
 const SkillItemGauge = styled.div`
     position: absolute;
-    top: 40px;
-    height: 10px;
-    border-radius: 10px;
+    top: 7vh;
+    width: 100%;
+    height: 2vh;
+    border-radius: 1vw;
     background-color: ${props => props.color};
     z-index:2;
     width: ${props => props.gaugePro}%;
@@ -27,10 +28,10 @@ const SkillItemGauge = styled.div`
 
 const SkillItemGaugeBg = styled.div`
     position: absolute;
-    top: 40px;
+    top: 7vh;
     width: 100%;
-    height: 10px;
-    border-radius: 10px;
+    height: 2vh;
+    border-radius: 1vw;
     z-index:1;
     background-color: #c4c4c4;
 `;
