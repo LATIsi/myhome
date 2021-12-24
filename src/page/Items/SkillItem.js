@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const SkillItemImg = styled.div`
     position: absolute;
-    left: 1.5vw;
+    left: 2vw;
     width: 4vw;
     height: 4vh;
     color: black;
@@ -22,7 +22,7 @@ const SkillItemGauge = styled.div`
     height: 2vh;
     border-radius: 1vw;
     background-color: ${props => props.color};
-    z-index:2;
+    z-index:3;
     width: ${props => props.gaugePro}%;
 `;
 
@@ -32,7 +32,7 @@ const SkillItemGaugeBg = styled.div`
     width: 100%;
     height: 2vh;
     border-radius: 1vw;
-    z-index:1;
+    z-index:2;
     background-color: #c4c4c4;
 `;
 

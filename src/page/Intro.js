@@ -39,7 +39,7 @@ const IntroselfDown = styled.div`
 
 const Name = styled.text`
   position: absolute;
-  width: auto;
+  width: 20vw;
   height: auto;
   right: 0;
   top: 1vh;
@@ -134,7 +134,6 @@ const SelectButton = styled.button`
            background-color: #E4E4E4;
            color:#929292;
       `}
-    }
 
 `;
 

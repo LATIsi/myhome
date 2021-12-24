@@ -40,6 +40,7 @@
   font-size: 2.7vh;
   line-height: 4vh;
   right: 0;
+
   margin-right: 2vw;
   margin-left: 2vw;
   padding: 3vh 2vw;
@@ -97,8 +98,10 @@
 
 .SkillItem {
   position: relative;
-  width: 95%;
-  height: 90%;
+  width: 90%;
+  height: 10vh;
+  padding-top: 3vh;
+  padding-bottom: 2vh;
 }
 
 .SkillItem_collect {
@@ -109,14 +112,14 @@
 }
 .SkillItem_name {
   position: absolute;
-  top: 5px;
+  top: 1vh;
   position: absolute;
   width: 87%;
   height: 30px;
   font-family: Righteous;
   font-style: normal;
   font-weight: normal;
-  font-size: 4vh;
+  font-size: 1.8vw;
   color: #000000;
 }
 

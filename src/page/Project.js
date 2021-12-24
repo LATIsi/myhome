@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled , {css} from "styled-components";
 import '../style/project_style.css';
 import ProjectList from './List/ProjectList';
+import { MdClose } from "react-icons/md";
 
 const ProjectScroll = styled.div`
     position: absolute;
@@ -52,7 +53,7 @@ left:5%;
 font-family: 'Noto Sans KR';
 font-style: normal;
 font-weight: normal;
-font-size: 3vh;
+font-size: 2.5vh;
 text-align: left;
 color: #000000;
 `;
@@ -90,7 +91,7 @@ position: relative;
 width: 85%;
 height:auto;
 padding-top:50px;
-padding-bottom:30px;
+padding-bottom:20vh;
 left: 50%;
 transform: translateX(-50%);
 `;
@@ -105,10 +106,40 @@ background: linear-gradient(0deg, rgba(73, 73, 73, 0.08) 17.28%,
 rgba(181, 181, 181, 0.06) 54.77%, rgba(255, 255, 255, 0) 83.18%);
 `;
 
+const Footer = styled.div`
+position: absolute;
+width: 115vw;
+height:10vh;
+left:-50%;
+bottom:0;
+text-align:right;
+margin-right:40vw;
+white-space: pre-wrap;
+`;
+
+const FooterBg = styled.div`
+position:absolute ;
+width: 50vw;
+height:20vh;
+top:-23vh;
+text-align:right;
+right:0;
+z-index:5;
+background-color: rgba(0, 0, 0, 0.9);
+visibility: hidden;
+    ${props => props.open && css`
+        visibility: visible;
+    `}
+`;
 
 
-class Project extends Component{
-    render(){
+function Project () {
+        const [open, openFooter] = useState(false);
+
+        const onToggle = () => openFooter(!open);
+
+      const footerText="Copyright 2021. kmj. all rights reserverd. \n main, intro 프로필 사진 출처";
+      const footerdesc="출처출처출처";
       return(
         <>
         <ProjectScroll>
@@ -122,7 +153,7 @@ class Project extends Component{
           <ProjectTopTextDesc>대학교 수업을 들으며 진행 했던 프로젝트들 입니다.</ProjectTopTextDesc>
           <ProjectList select="team"/>
           <div className="ProjectLinkText" onClick={() => window.open('https://github.com/LATIsi/team_project', '_blank')}>
-            team pj ReadME PPT file download - github
+            team pj ReadME PPT file download - github // 눌리는 영역이 아닌곳을 div로 감싸서 클릭하지못하게 막기..가능하냐고오
           </div>
         </TeamProject>
         <ProjectHr2/>
@@ -133,12 +164,18 @@ class Project extends Component{
             personal pj PPT file download - github
           </div>
           <ProjectBg2/>
+          <Footer>
+              <FooterBg>
+              <MdClose/>
+              {footerdesc}
+              </FooterBg>
+            <div className="footer_text" onClick={onToggle} open={false}>{footerText}</div>
+          </Footer>
         </PersonalProject>
         </ProjectBg>
         </ProjectScroll>
         </>
       );
-    }
   }
 
   export default Project;

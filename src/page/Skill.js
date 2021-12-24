@@ -37,38 +37,53 @@ const SkillLine = styled.text`
     border: none;
 `;
 
-const SkillMain = styled.div`
-      position: absolute;
-      width: 70vw;
-      height: 62vh;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom:10vh;
-      background: white;
-      box-sizing: border-box;
-      box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 1vw;
-      overflow: hidden;
-`;
 
 const SkillMainTitle = styled.text`
+    z-index: 3;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     width: 70vw;
     height: 10vh;
+    bottom: 62vh;
     text-align: center;
     font-family: Righteous;
     font-style: normal;
     font-weight: normal;
     font-size: 5vh;
     line-height: 10vh;
-    left: 0;
     color: #7A64FF;
-    top: 0;
     background: #FFFFFF;
     box-sizing: border-box;
-    box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.25);
+    box-shadow:  0.05vw 0.2vw 4px rgba(0, 0, 0, 0.25);
     border-radius: 1vw;
     color: ${props => props.color};
+`;
+
+const SkillMain = styled.div`
+      z-index: 2;
+      position: absolute;
+      width: 70vw;
+      height: 55vh;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom:10vh;
+      padding-top:7vh;
+      background: white;
+      box-sizing: border-box;
+      box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 1vw;
+      overflow-y: auto;
+      overflow: scroll;
+      overflow-x:hidden; 
+      &::-webkit-scrollbar {
+        width: 0.8vw;
+      }
+      &::-webkit-scrollbar-thumb {
+        height: 15%;
+        background-color: #a4b3be;
+        border-radius: 5px;  
+      }
 `;
 
 const SkillButton = styled.button`
@@ -77,7 +92,6 @@ const SkillButton = styled.button`
     border: none;
     border-radius: 1vw;
     background:white;
-
     ${props => props.incheck &&
       css`
            background-color: #C4C4C4;
@@ -154,8 +168,8 @@ function Skill () {
           <Skillbg>
             <SkillTitle>TOOL / Language SKILL</SkillTitle>
             <SkillLine/>
+            <SkillMainTitle color={color}> {TitleText} </SkillMainTitle>
             <SkillMain>
-              <SkillMainTitle color={color}> {TitleText} </SkillMainTitle>
               <SkillList color={color} select={SkillSelect} />
             </SkillMain>
             <div className="SkillButton_div">

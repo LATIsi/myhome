@@ -48,6 +48,34 @@ const SKillCotent = [
     gauge: 40
   },
   {
+    id: 22,
+    select:'DevLanguage',
+    img: <SiJavascript/>,
+    name: 'JavaScript',
+    gauge: 65
+  },
+  {
+    id: 23,
+    select:'DevLanguage',
+    img: <SiCss3/>,
+    name: 'HTML / css',
+    gauge: 80
+  },
+  {
+    id: 24,
+    select:'DevLanguage',
+    img: <AiOutlineConsoleSql/>,
+    name: 'SQL',
+    gauge: 70
+  },
+  {
+    id: 25,
+    select:'DevLanguage',
+    img: <SiReact/>,
+    name: 'React',
+    gauge: 40
+  },
+  {
     id: 6,
     select:'DesignTool',
     img: <SiAdobephotoshop/>,
@@ -128,14 +156,13 @@ const SKillCotent = [
 ];
 
 const SkilllistBlock = styled.div`
-    position: absolute;
-    width: 80%;
-    height: 40vh;
-    bottom : 4vh;
+    position: relative;
+    width: 90%;
+    height:90%;
     float: left;
     display: grid;
     left: 50%;
-    grid-column-gap: 30px;
+    grid-column-gap: 2vw;
     transform: translateX(-50%);
     grid-template-columns:  1fr 1fr;
 `;

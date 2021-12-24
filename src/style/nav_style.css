@@ -8,7 +8,7 @@
   padding: 5px 2vw;
   color: black;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 .nav_Text {
@@ -38,7 +38,7 @@
 }
 
 .nav_menu li {
-  padding: 8px 20px;
+  padding: 2vh 1vw;
   float: right;
 }
 
@@ -87,7 +87,6 @@ ul {
     color: #000000;
     flex-direction: column;
     align-items: center;
-    left: 0;
     width: 100vw;
   }
   .nav_menu ul {
