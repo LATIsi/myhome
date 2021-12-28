@@ -20,6 +20,7 @@
 .ProjectLinkText {
   position: relative;
   font-family: NATS;
+  height: auto;
   font-style: normal;
   font-weight: normal;
   font-size: 3.5vh;

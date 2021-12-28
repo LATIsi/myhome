@@ -109,7 +109,7 @@ rgba(181, 181, 181, 0.06) 54.77%, rgba(255, 255, 255, 0) 83.18%);
 const Footer = styled.div`
 position: absolute;
 width: 115vw;
-height:10vh;
+height:8vh;
 left:-50%;
 bottom:0;
 text-align:right;
@@ -118,28 +118,58 @@ white-space: pre-wrap;
 `;
 
 const FooterBg = styled.div`
-position:absolute ;
-width: 50vw;
-height:20vh;
-top:-23vh;
+position:fixed ;
+width: 35vw;
+height:30vh;
+bottom:12vh;
 text-align:right;
-right:0;
+right:-13vw;
 z-index:5;
-background-color: rgba(0, 0, 0, 0.9);
-visibility: hidden;
-    ${props => props.open && css`
-        visibility: visible;
-    `}
+background:#e9ecef;
+${props => props.open && css`
+visibility: visible;
+`}
 `;
 
+const Close = styled.div`
+position:absolute ;
+width: 3vw;
+height:20%;
+top:2vh;
+right:0;
+font-size: 2vh;
+margin-right:1.5vw;
+`;
+
+const FooterText = styled.div`
+position:absolute ;
+margin-right:2vw;
+margin-left:2vw;
+width: 95%;
+height:65%;
+bottom:2vh;
+right:0;
+text-align:right;
+font-size: 1vw;
+`;
+
+const FooterDiv = styled.div`
+position:absolute ;
+right:0;
+width: auto;
+height:auto;
+`;
 
 function Project () {
-        const [open, openFooter] = useState(false);
 
-        const onToggle = () => openFooter(!open);
+  const [open, setOpen] = useState(false);
+  const onToggle = () => {setOpen(!open); console.log(open)};
 
-      const footerText="Copyright 2021. kmj. all rights reserverd. \n main, intro 프로필 사진 출처";
-      const footerdesc="출처출처출처";
+
+      const footerText="Copyright 2021. kmj. all rights reserverd. & 사진 출처";
+      const footerdesc1="home 이미지 - Photo by Zan \n ";
+      const footerdesc2="Intro 이미지 - Photo by Nick Adams \n ";
+      const footerdesc3="Project 남성의류쇼핑몰 이미지 - Photo by Priscilla Du Preez \n ";
       return(
         <>
         <ProjectScroll>
@@ -153,7 +183,7 @@ function Project () {
           <ProjectTopTextDesc>대학교 수업을 들으며 진행 했던 프로젝트들 입니다.</ProjectTopTextDesc>
           <ProjectList select="team"/>
           <div className="ProjectLinkText" onClick={() => window.open('https://github.com/LATIsi/team_project', '_blank')}>
-            team pj ReadME PPT file download - github // 눌리는 영역이 아닌곳을 div로 감싸서 클릭하지못하게 막기..가능하냐고오
+            team pj ReadME PPT file download - github
           </div>
         </TeamProject>
         <ProjectHr2/>
@@ -165,11 +195,19 @@ function Project () {
           </div>
           <ProjectBg2/>
           <Footer>
-              <FooterBg>
-              <MdClose/>
-              {footerdesc}
-              </FooterBg>
-            <div className="footer_text" onClick={onToggle} open={false}>{footerText}</div>
+              {open && (
+                  <FooterBg>
+                    <Close>
+                    <MdClose onClick={onToggle} size="2vw"/>
+                    </Close>
+                    <FooterText>
+                      <div onClick={() => window.open('https://unsplash.com/@zanilic?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText', '_blank')}>{footerdesc1}</div>
+                      <div onClick={() => window.open('https://unsplash.com/@nckadms?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText', '_blank')}>{footerdesc2}</div>
+                      <div onClick={() => window.open('https://unsplash.com/@priscilladupreez?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText', '_blank')}>{footerdesc3}</div>
+                    </FooterText>
+                   </FooterBg>
+              )}
+            <FooterDiv onClick={onToggle} open={open}>{footerText}</FooterDiv>
           </Footer>
         </PersonalProject>
         </ProjectBg>
