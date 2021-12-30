@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../style/Item_style.css';
 import ProjectItem from '../Items/ProjectItem';
 import styled from "styled-components";
+import '../../style/project_style.css';
 
 //alt는 사진 설명
 //team이 true인것은 팀프로젝트, 아닌것들은 (혼자 제작한 프로젝트는) false
@@ -59,14 +60,24 @@ const ProjectCotent = [
 const ProjectlistBlock = styled.div`
     width: 100%;
     height: 100%;
+    position: relative;
     float: left;
     display: grid;
-    z-index: 2;
     grid-template-columns: 1fr 1fr;
     margin-top: 20px;
     margin-bottom: 20px;
+    z-index: 3;
 `;
 
+
+const ProjectDescBlock = styled.div`
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 2;
+`;
 class ProjectList extends Component{
      render(){
        const {select} = this.props;
@@ -74,6 +85,7 @@ class ProjectList extends Component{
        const TeamContent =  ProjectCotent.filter(Item => ('team' === Item.select));
 
       return(
+        <>
         <ProjectlistBlock>
         {
           { 
@@ -100,8 +112,21 @@ class ProjectList extends Component{
            )) 
           }[select]
         }
-
      </ProjectlistBlock>
+     <ProjectDescBlock>
+        {
+          { 
+            team : <div className="ProjectLinkText" onClick={() => window.open('https://github.com/LATIsi/team_project', '_blank')}>
+                      team pj ReadME PPT file download - github
+                  </div>
+            ,
+            personal :  <div className="ProjectLinkText" onClick={() => window.open('https://github.com/LATIsi/personal_project', '_blank')}>
+                          personal pj PPT file download - github
+                        </div>
+          }[select]
+        }
+     </ProjectDescBlock>
+    </>
       );
     }
   }

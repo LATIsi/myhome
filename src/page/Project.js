@@ -163,7 +163,7 @@ height:auto;
 function Project () {
 
   const [open, setOpen] = useState(false);
-  const onToggle = () => {setOpen(!open); console.log(open)};
+  const onToggle = () => setOpen(!open)
 
 
       const footerText="Copyright 2021. kmj. all rights reserverd. & 사진 출처";
@@ -182,17 +182,11 @@ function Project () {
           <div className="ProjectHeaderText">Team project</div>
           <ProjectTopTextDesc>대학교 수업을 들으며 진행 했던 프로젝트들 입니다.</ProjectTopTextDesc>
           <ProjectList select="team"/>
-          <div className="ProjectLinkText" onClick={() => window.open('https://github.com/LATIsi/team_project', '_blank')}>
-            team pj ReadME PPT file download - github
-          </div>
         </TeamProject>
         <ProjectHr2/>
         <PersonalProject>
           <div className="ProjectHeaderText">personal project</div>
           <ProjectList select="personal"/>
-          <div className="ProjectLinkText" onClick={() => window.open('https://github.com/LATIsi/personal_project', '_blank')}>
-            personal pj PPT file download - github
-          </div>
           <ProjectBg2/>
           <Footer>
               {open && (
