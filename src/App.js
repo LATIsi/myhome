@@ -7,6 +7,8 @@ import Intro from './page/Intro';
 import './style/nav_style.css';
 import {Route, Switch, BrowserRouter, Link} from 'react-router-dom';
 import { HiMenu } from "react-icons/hi";
+import { MdClose } from "react-icons/md";
+
 
 const Content = styled.div`
 overflow-y:auto;
@@ -26,6 +28,35 @@ const NevLi = styled.li`
 
 `;
 
+
+const Open = styled.div`
+    position: absolute;
+    top:2vh;
+    right:6vw;
+    z-index: 2;
+    height: auto;
+    width: auto;
+    color:white;
+    font-size: 5vh;
+    visibility: hidden;
+    @media screen and (max-width: 712px) {
+      visibility: visible;
+    }
+`;
+
+const Close = styled.div`
+    position: absolute;
+    top:-4.5vh;
+    right:4vw;
+    z-index: 3;
+    height: auto;
+    width: auto;
+    font-size: 5vh;
+    visibility: hidden;
+    @media screen and (max-width: 712px) {
+      visibility: visible;
+    }
+`;
 
 function App() {
 
@@ -65,15 +96,20 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+          <Open>
+          <HiMenu/>
+          </Open>
       <nav className="navbar">
-      <div className="nav_Text">MINJI's PORTFOLIO</div>
+      <div className="nav_Text">MJ_PORTFOLIO</div>
       <div className="nav_menu">
-          {/* <HiMenu/> */}
+          <Close>
+          <MdClose/>
+          </Close>
           <ul>
-            <li onClick={checkProject}><Link to="/myhome/project"><NevLi nev_color={nev_color1}>PROJECT</NevLi></Link></li>
-            <li  onClick={checkSkill}><Link to="/myhome/skill"><NevLi nev_color={nev_color2}>SKILL</NevLi></Link></li>          
+            <li  onClick={checkHome}><Link to="/myhome/home"><NevLi nev_color={nev_color4}>HOME</NevLi></Link></li>         
             <li  onClick={checkIntro}><Link to="/myhome/intro"><NevLi nev_color={nev_color3}>INTRO</NevLi></Link></li>
-            <li  onClick={checkHome}><Link to="/myhome/home"><NevLi nev_color={nev_color4}>HOME</NevLi></Link></li>
+            <li  onClick={checkSkill}><Link to="/myhome/skill"><NevLi nev_color={nev_color2}>SKILL</NevLi></Link></li> 
+            <li onClick={checkProject}><Link to="/myhome/project"><NevLi nev_color={nev_color1}>PROJECT</NevLi></Link></li>
           </ul>
         </div>
       </nav>

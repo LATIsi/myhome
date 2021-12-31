@@ -111,7 +111,6 @@ const SelectButton = styled.button`
     top: 8vh;
     width: 10vw;
     height: 15vh;
-    
     left:18.5%;
     font-size: 2.5vh;
     transform: translateX(-50%);
@@ -199,7 +198,7 @@ function Intro() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <AiFillGithub size="30" />
+                <AiFillGithub size="30" color='black' />
               </a>
               {/* <a
                 href="https://github.com/LATIsi"
