@@ -13,6 +13,17 @@ const SkillItemImg = styled.div`
     &:hover {
       color: ${props => props.color};
     }
+    @media screen and (max-width: 950px) {
+      left: 3vw;
+      width: 8vw;
+      font-size: 8vh;
+    }
+
+    @media screen and (max-width: 712px) {
+      left: 2vw;
+      width: 5vw;
+      font-size: 8vw;
+    }
 `;
 
 const SkillItemGauge = styled.div`
@@ -23,7 +34,15 @@ const SkillItemGauge = styled.div`
     border-radius: 1vw;
     background-color: ${props => props.color};
     z-index:3;
+    margin-left: 10px;
     width: ${props => props.gaugePro}%;
+    @media screen and (max-width: 950px) {
+      top: 9vh;
+    }
+    @media screen and (max-width: 712px) {
+      top: 9vw;
+      height: 2vw;
+    }
 `;
 
 const SkillItemGaugeBg = styled.div`
@@ -33,7 +52,16 @@ const SkillItemGaugeBg = styled.div`
     height: 2vh;
     border-radius: 1vw;
     z-index:2;
+    margin-left: 10px;
     background-color: #c4c4c4;
+    @media screen and (max-width: 950px) {
+      top: 9vh;
+    }
+    @media screen and (max-width: 712px) {
+      top: 9vw;
+      height: 2vw;
+      width: 100%;
+    }
 `;
 
   function SkillItem({ id, select, img, name, gauge, color}) {

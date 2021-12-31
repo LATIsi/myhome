@@ -79,11 +79,11 @@
 
 .ProjectItem_day {
   position: absolute;
-  bottom: 5.5vh;
+  bottom: 6vh;
   font-weight: bord;
   font-family: Noto Sans KR, sans-serif;
-  font-size: 3vh;
-  line-height: 3vh;
+  font-size: 2.5vh;
+  line-height: 2.5vh;
   color: white;
 }
 
@@ -92,8 +92,8 @@
   bottom: 2.5vh;
   font-family: Noto Sans KR, sans-serif;
   color: white;
-  font-size: 2vh;
-  line-height: 2vh;
+  font-size: 1vw;
+  line-height: 1.5vh;
 }
 
 .SkillItem {
@@ -113,13 +113,15 @@
 .SkillItem_name {
   position: absolute;
   top: 1vh;
+  margin-left: 10px;
   position: absolute;
   width: 87%;
-  height: 30px;
+  height: 5vh;
   font-family: Righteous;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.8vw;
+  font-size: 1.7vw;
+  line-height: 2.5vw;
   color: #000000;
 }
 
@@ -136,4 +138,57 @@
   font-size: 2.5vh;
   line-height: 2.5vh;
   color: #000000;
+}
+
+@media screen and (width <= 950px) {
+  .SkillItem {
+    position: relative;
+    width: 90%;
+    height: 10vh;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+  }
+
+  .SkillItem_collect {
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 100%;
+  }
+  .SkillItem_name {
+    font-size: 3vw;
+    line-height: 4vw;
+  }
+
+  .SkillItem_pro {
+    font-size: 2vw;
+    line-height: 3vw;
+  }
+}
+
+@media screen and (max-width: 712px) {
+  .SkillItem_collect {
+    height: 10vh;
+    width: 55vw;
+  }
+  .SkillItem {
+    position: relative;
+    width: 90%;
+    height: 13vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+
+  .SkillItem_name {
+    top: 2vw;
+    font-size: 5vw;
+    line-height: 4vw;
+  }
+
+  .SkillItem_pro {
+    top: 4vw;
+    font-size: 2.5vw;
+    line-height: 3vw;
+    margin-left: 2vw;
+  }
 }

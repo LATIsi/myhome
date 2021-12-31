@@ -133,10 +133,13 @@ const SkilllistBlock = styled.div`
     height:90%;
     float: left;
     display: grid;
-    left: 50%;
     grid-column-gap: 2vw;
+    left: 50%;
     transform: translateX(-50%);
     grid-template-columns:  1fr 1fr;
+    @media screen and (max-width: 950px) {
+      display: block;
+    }
 `;
 
 class SkillList extends Component{

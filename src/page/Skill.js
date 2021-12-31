@@ -24,6 +24,14 @@ const SkillTitle = styled.text`
       line-height: 8vh;
       color: #FFFFFF;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      @media screen and (max-width: 712px) {
+        white-space: pre-wrap;
+        Bottom:80vh;
+        font-size: 5vh;
+        line-height: 5vh;
+        width: 100vw;
+        left: 8vw;
+      }
 
 `;
 
@@ -35,6 +43,9 @@ const SkillLine = styled.text`
     Bottom:73.5vh;
     background: #FFFFFF;
     border: none;
+    @media screen and (max-width: 712px) {
+      visibility: hidden;
+    }
 `;
 
 
@@ -58,6 +69,15 @@ const SkillMainTitle = styled.text`
     box-shadow:  0.05vw 0.2vw 4px rgba(0, 0, 0, 0.25);
     border-radius: 1vw;
     color: ${props => props.color};
+    @media screen and (max-width: 712px) {
+      width: 85vw;
+      font-size: 4vh;
+      line-height: 8vh;
+      height: 8vh;
+      border-radius: 5vw;
+      bottom: 62vh;
+    }
+
 `;
 
 const SkillMain = styled.div`
@@ -84,6 +104,18 @@ const SkillMain = styled.div`
         background-color: #a4b3be;
         border-radius: 5px;  
       }
+      padding-top:7vh;
+
+      @media screen and (max-width: 950px) {
+        padding-top:5vh;
+      }
+
+      @media screen and (max-width: 712px) {
+        width: 85vw;
+        border-radius: 0 0 5vw 5vw ;
+        height: 60vh;
+        bottom:5vh;
+      }
 `;
 
 const SkillButton = styled.button`
@@ -109,6 +141,15 @@ const SkillButton = styled.button`
       background-color: #C4C4C4;
     }
 
+    @media screen and (max-width: 712px) {
+      bottom:69vh;
+      border-radius: 3vw;
+      height: 2vh;
+      width: 2vw;
+      & + & {
+        margin-left: 10vw;
+      }
+    }
 `;
 
 
@@ -164,9 +205,11 @@ function Skill () {
             setInCheck4(true);
       }
 
+      const SkillTitledesc = "TOOL / \nLanguage SKILL"
+
       return(
           <Skillbg>
-            <SkillTitle>TOOL / Language SKILL</SkillTitle>
+            <SkillTitle>{SkillTitledesc}</SkillTitle>
             <SkillLine/>
             <SkillMainTitle color={color}> {TitleText} </SkillMainTitle>
             <SkillMain>
