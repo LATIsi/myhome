@@ -43,6 +43,9 @@ font-size: 8vh;
 line-height: 8vh;
 /* identical to box height */
 color: #000000;
+    @media screen and (max-width: 712px) {
+      top:3vh;
+    }
 `;
 
 const ProjectTopTextDesc = styled.text`
@@ -53,9 +56,16 @@ left:5%;
 font-family: 'Noto Sans KR';
 font-style: normal;
 font-weight: normal;
-font-size: 2.5vh;
+font-size: 3vh;
 text-align: left;
 color: #000000;
+    @media screen and (max-width: 950px) {
+      left:5vw;
+    }
+    @media screen and (max-width: 499px) {
+      white-space: pre-wrap;
+      font-size: 2.5vh;
+    }
 `;
 
 const ProjectHr1 = styled.hr`
@@ -66,6 +76,9 @@ right:-10px;
 top:21vh;
 background:#E1E1E1;
 border: none;
+      @media screen and (max-width: 712px) {
+        top:13vh;
+      }
 `;
 
 const ProjectHr2 = styled.hr`
@@ -94,6 +107,10 @@ padding-top:50px;
 padding-bottom:20vh;
 left: 50%;
 transform: translateX(-50%);
+      @media screen and (max-width: 499px) {
+        padding-top:10vh;
+        padding-bottom:10vh;
+      }
 `;
 
 const ProjectBg2 = styled.div`
@@ -104,6 +121,10 @@ left:-50%;
 bottom:0;
 background: linear-gradient(0deg, rgba(73, 73, 73, 0.08) 17.28%,
 rgba(181, 181, 181, 0.06) 54.77%, rgba(255, 255, 255, 0) 83.18%);
+      @media screen and (max-width: 499px) {
+        height:25vh;
+        bottom:0;
+      }
 `;
 
 const Footer = styled.div`
@@ -114,21 +135,29 @@ left:-50%;
 bottom:0;
 text-align:right;
 margin-right:40vw;
-white-space: pre-wrap;
+    @media screen and (max-width: 712px) {
+      white-space: pre-wrap;
+      bottom:3vh;
+      left:-60%;
+    }
 `;
 
 const FooterBg = styled.div`
 position:fixed ;
 width: 35vw;
-height:30vh;
+height:25vh;
 bottom:12vh;
 text-align:right;
 right:-13vw;
 z-index:5;
 background:#e9ecef;
-${props => props.open && css`
-visibility: visible;
-`}
+    ${props => props.open && css`
+    visibility: visible;
+    `}
+
+    @media screen and (max-width: 900px) {
+      width: 70vw;
+    }
 `;
 
 const Close = styled.div`
@@ -138,7 +167,15 @@ height:20%;
 top:2vh;
 right:0;
 font-size: 2vh;
-margin-right:1.5vw;
+margin-right:2.5vw;
+
+    @media screen and (max-width: 590px) {
+      margin-right:5vw;
+    }
+
+    @media screen and (max-width: 499px) {
+      margin-right:10vw;
+    }
 `;
 
 const FooterText = styled.div`
@@ -146,7 +183,7 @@ position:absolute ;
 margin-right:2vw;
 margin-left:2vw;
 width: 95%;
-height:65%;
+height:55%;
 bottom:2vh;
 right:0;
 text-align:right;
@@ -158,6 +195,9 @@ position:absolute ;
 right:0;
 width: auto;
 height:auto;
+    @media screen and (max-width: 499px) {
+      font-size: 1.5vh;
+    }
 `;
 
 function Project () {
@@ -165,8 +205,10 @@ function Project () {
   const [open, setOpen] = useState(false);
   const onToggle = () => setOpen(!open)
 
+  const topdesc = "대학교 조별과제로 진행한 \n프로젝트 입니다."
 
-      const footerText="Copyright 2021. kmj. all rights reserverd. & 사진 출처";
+
+      const footerText="Copyright 2021. kmj. all rights reserverd.\n & 사진 출처";
       const footerdesc1="home 이미지 - Photo by Zan \n ";
       const footerdesc2="Intro 이미지 - Photo by Nick Adams \n ";
       const footerdesc3="Project 남성의류쇼핑몰 이미지 - Photo by Priscilla Du Preez \n ";
@@ -180,7 +222,7 @@ function Project () {
           </div>
         <TeamProject>
           <div className="ProjectHeaderText">Team project</div>
-          <ProjectTopTextDesc>대학교 수업을 들으며 진행 했던 프로젝트들 입니다.</ProjectTopTextDesc>
+          <ProjectTopTextDesc>{topdesc}</ProjectTopTextDesc>
           <ProjectList select="team"/>
         </TeamProject>
         <ProjectHr2/>
@@ -192,7 +234,7 @@ function Project () {
               {open && (
                   <FooterBg>
                     <Close>
-                    <MdClose onClick={onToggle} size="2vw"/>
+                    <MdClose onClick={onToggle} size="5vh"/>
                     </Close>
                     <FooterText>
                       <div onClick={() => window.open('https://unsplash.com/@zanilic?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText', '_blank')}>{footerdesc1}</div>

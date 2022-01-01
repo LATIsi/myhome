@@ -20,7 +20,7 @@ const ProjectCotent = [
     img: '/assets/dongne.png',
     alt:'우리마트다모여',
     day: '2019.09 - 2019.12',
-    desc: '우리마트다모여 / 집 주변 동네마트 검색, 조회, 배달 앱',
+    desc: '우리마트다모여 / 동네마트 검색, 조회, 배달 앱',
     select: 'team'
   },
   {
@@ -67,6 +67,13 @@ const ProjectlistBlock = styled.div`
     margin-top: 20px;
     margin-bottom: 20px;
     z-index: 3;
+
+    @media screen and (max-width: 950px) {
+      display:block;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
 `;
 
 

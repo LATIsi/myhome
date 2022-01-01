@@ -147,7 +147,7 @@ const SkillButton = styled.button`
       height: 2vh;
       width: 2vw;
       & + & {
-        margin-left: 10vw;
+        margin-left: 6vw;
       }
     }
 `;

@@ -36,7 +36,7 @@ const Open = styled.div`
     z-index: 2;
     height: auto;
     width: auto;
-    color:white;
+    color:black;
     font-size: 7vh;
     visibility: hidden;
     display:none;
@@ -82,7 +82,7 @@ function App() {
   const [nev_color1, setColor1] = useState(false);
   const [nev_color2, setColor2] = useState(false);
   const [nev_color3, setColor3] = useState(false);
-  const [nev_color4, setColor4] = useState(false);
+  const [nev_color4, setColor4] = useState(true);
 
   
   const [nevOpen, setOpen] = useState(false);
