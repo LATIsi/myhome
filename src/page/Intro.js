@@ -10,6 +10,11 @@ const IntroRecord = styled.div`
   height: 100vh;
   position: absolute;
   background: #0468bf;
+        @media screen and (max-width: 712px) {
+          top:30vh;
+          width: 100vw;
+          height: 70vh;
+        }
 `;
 
 const Introself = styled.div`
@@ -19,6 +24,13 @@ const Introself = styled.div`
   right: 0;
   box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.4);
   background: #f2f2f2;
+
+      @media screen and (max-width: 712px) {
+        top:0;
+        width: 100vw;
+        height: 30vh;
+      }
+
 `;
 
 const IntroselfTop = styled.div`
@@ -26,7 +38,21 @@ const IntroselfTop = styled.div`
   height: 18vh;
   position: absolute;
   right: 16vw;
-  top: 15%;
+  top: 15vh;
+
+      @media screen and (max-width: 712px) {
+        top:2vh;
+        width: 100vw;
+        height: 25vh;
+        right: 0;
+      }
+
+      @media screen and (max-width: 712px) {
+        top:2vh;
+        width: 100vw;
+        height: 25vh;
+        right: 0;
+      }
 `;
 
 const IntroselfDown = styled.div`
@@ -35,6 +61,14 @@ const IntroselfDown = styled.div`
   position: absolute;
   right: 10%;
   top: 48%;
+
+      @media screen and (max-width: 712px) {
+        top: 18vh;
+        right:45vw;
+        height: 10vh;
+        width: 60vw;
+      }
+
 `;
 
 const Name = styled.text`
@@ -42,15 +76,22 @@ const Name = styled.text`
   width: 20vw;
   height: auto;
   right: 0;
-  top: 1vh;
-
+  bottom:8vh;
   font-family: Righteous;
   font-style: normal;
   font-weight: normal;
-  font-size: 8vh;
-  line-height: 8vh;
+  font-size: 3.5vw;
+  line-height: 3.5vw;
   text-align: right;
   color: #000000;
+
+    @media screen and (max-width: 712px) {
+      width: 40vw;
+      font-size: 7vw;
+      line-height: 7vw;
+      bottom:14vh;
+      right:45vw;
+    }
 `;
 
 const Birthday = styled.text`
@@ -58,7 +99,7 @@ const Birthday = styled.text`
   width: auto;
   height: auto;
   right: 0;
-  top: 10vh;
+  bottom:3.5vh;
   font-family: Noto Sans KR;
   font-style: normal;
   font-weight: normal;
@@ -66,6 +107,11 @@ const Birthday = styled.text`
   line-height: 3vh;
   text-align: right;
   color: #000000;
+
+      @media screen and (max-width: 712px) {
+        bottom:10vh;
+        right:45vw;
+      }
 `;
 
 const IntroHr1 = styled.hr`
@@ -76,6 +122,10 @@ const IntroHr1 = styled.hr`
   top: 43vh;
   background: #C8C8C8;
   border: none;
+
+      @media screen and (max-width: 712px) {
+        display:none;
+      }
 `;
 
 const IntroselfText = styled.text`
@@ -93,6 +143,12 @@ const IntroselfText = styled.text`
   /* or 133% */
   text-align: right;
   color: #223440;
+
+      @media screen and (max-width: 712px) {
+        width: 60vw;
+        height: auto;
+        bottom:0;
+      }
 `;
 
 const EduCertiDiv = styled.div`
@@ -104,6 +160,15 @@ const EduCertiDiv = styled.div`
   top: 16vh;
   background: #f2f2f2;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        @media screen and (max-width: 860px) {
+          width: 56vw;
+        }
+
+        @media screen and (max-width: 712px) {
+          width: 95vw;
+          top: 15vh;
+          height: 55vh;
+        }
 `;
 
 const SelectButton = styled.button`
@@ -134,6 +199,22 @@ const SelectButton = styled.button`
            color:#929292;
       `}
 
+      @media screen and (max-width: 860px) {
+        left:14.5%;
+      }
+
+      @media screen and (max-width: 712px) {
+        top: 6vh;
+        width: 47.5vw;
+        left:26.3vw;
+        border-radius: 4vh;
+        font-size: 3vh;
+        padding-bottom: 7vh;
+            & + Button {
+              margin-left:47.5vw;
+            }
+
+      }
 `;
 
 const IntroSelfDownText =
@@ -141,20 +222,35 @@ const IntroSelfDownText =
 
 const Icons = styled.div`
   position: absolute;
-  width: 2vh;
+  width: 2vw;
   height: 1vh;
-  right: 1vw;
-  bottom: 2vh;
+  right: 0;
+  bottom: 1vh ;
   text-align: right;
   display: inline;
+
+      @media screen and (max-width: 1020px) {
+        right: 0.8vw;
+      }
+
+      @media screen and (max-width: 800px) {
+        right: 1.3vw;
+      }
+
+      @media screen and (max-width: 712px) {
+        right:5vw;
+        bottom:1vh;
+        height:3vh;
+        width: 2vw;
+      }
 `;
 
 const View1 = styled.div`
   position: absolute;
   width: 100%;
+  top:0;
   height: auto;
   right: 0;
-  bottom: 0;
   text-align: right;
   display: inline;
 `;
@@ -216,7 +312,9 @@ function Intro() {
               </a> */}
             </Icons>
           </IntroselfTop>
-          <div className="intro_Picture"></div>
+          <div className="intro_Picture_in">
+          <div className="intro_Picture"/>
+          </div>
           <IntroHr1 />
           <IntroselfDown>
             <IntroselfText>{IntroSelfDownText}</IntroselfText>

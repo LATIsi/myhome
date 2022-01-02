@@ -6,12 +6,21 @@
   left: 0;
 }
 
+.intro_Picture_in {
+  width: 10vw;
+  height: 23vh;
+  position: absolute;
+  right: 10%;
+  top: 15vh;
+}
+
 .intro_Picture {
   position: absolute;
   width: 10vw;
-  height: 21vh;
+  height: 10vw;
   right: 10%;
-  top: 15%;
+  top: 50%;
+  transform: translateY(-50%);
   border-radius: 50%;
   background-image: url("../Image/intro.jpg");
   background-repeat: no-repeat;
@@ -32,4 +41,49 @@
   font-family: "Noto Sans KR";
   background: #f2f2f2;
   border-radius: 20px;
+}
+
+@media screen and (width <= 712px) {
+  .IntroBg {
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    margin-top: 0;
+    left: 0;
+  }
+
+  .intro_Picture_in {
+    width: 25vw;
+    height: 23vh;
+    position: absolute;
+    right: 15vw;
+    top: 3vh;
+  }
+
+  .intro_Picture {
+    position: absolute;
+    width: 22vh;
+    height: 22vh;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-image: url("../Image/intro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #ffffff;
+    box-sizing: border-box;
+    object-fit: cover;
+  }
+}
+
+@media screen and (width <= 550px) {
+  .intro_Picture_in {
+    right: 13vw;
+    top: 4vh;
+  }
+
+  .intro_Picture {
+    width: 20vh;
+    height: 20vh;
+  }
 }

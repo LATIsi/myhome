@@ -81,6 +81,9 @@ const IntrolistBlock = styled.div`
       background-color: #a4b3be;
       border-radius: 5px;  
     }
+      @media screen and (max-width: 712px) {
+        height: 55vh;
+      }
 `;
 
   class IntroList extends Component{
