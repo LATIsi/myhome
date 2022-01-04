@@ -58,7 +58,7 @@
   color: #035aa6;
 }
 
-@media screen and (width <= 712px) {
+@media screen and (max-width: 750px) {
   .navbar {
     position: fixed;
     width: 80vw;

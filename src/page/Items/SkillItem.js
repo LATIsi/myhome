@@ -19,7 +19,7 @@ const SkillItemImg = styled.div`
       font-size: 8vh;
     }
 
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 750px) {
       left: 2vw;
       width: 5vw;
       font-size: 8vw;
@@ -39,7 +39,7 @@ const SkillItemGauge = styled.div`
     @media screen and (max-width: 950px) {
       top: 9vh;
     }
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 750px) {
       top: 9vw;
       height: 2vw;
     }
@@ -57,7 +57,7 @@ const SkillItemGaugeBg = styled.div`
     @media screen and (max-width: 950px) {
       top: 9vh;
     }
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 750px) {
       top: 9vw;
       height: 2vw;
       width: 100%;

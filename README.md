@@ -103,6 +103,7 @@ UI디자인은 figma로 디자인.
 
 0.2.3.5 - 모바일 css 프로젝트  
 0.2.3.6 - 인트로712px css 완성, (모바일 디자인만 남음)
+0.2.3.6 - 최소 712px ->750px로 변경
 
 라우팅이 적용된 React SPA(Single Page Application)을 Github Page로 넣는것에 오류가 생김.  
 -> 12.22일 오류 수정

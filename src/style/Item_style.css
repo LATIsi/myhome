@@ -139,7 +139,7 @@
   color: #000000;
 }
 
-@media screen and (width <= 950px) {
+@media screen and (max-width: 950px) {
   .SkillItem {
     position: relative;
     width: 90%;
@@ -183,7 +183,7 @@
   }
 }
 
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 750px) {
   .SkillItem_collect {
     height: 10vh;
     width: 55vw;
@@ -228,6 +228,30 @@
   }
 }
 
+.IntroItem_day {
+  position: absolute;
+  top: 2vh;
+  width: auto;
+  height: 1vh;
+  right: 0;
+  margin-right: 3vw;
+  font-family: NATS;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 5vh;
+  line-height: 4.5vh;
+  color: #033540;
+}
+
+@media screen and (max-width: 550px) {
+  .IntroItem_content {
+    font-size: 3vw;
+    line-height: 6vw;
+    padding: 3vh 5vw;
+    border-radius: 3vw;
+  }
+}
+
 @media screen and (max-width: 499px) {
   .ProjectItem {
     width: 70vw;
@@ -243,5 +267,22 @@
   .ProjectItem_content {
     bottom: 1.8vh;
     font-size: 1.5vh;
+  }
+
+  .IntroItem {
+    position: relative;
+    width: 95%;
+    height: 18vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    margin-left: 3vw;
+  }
+
+  .IntroItem_content {
+    font-size: 3.8vw;
+    line-height: 7vw;
+    padding: 2vh 3vw;
   }
 }

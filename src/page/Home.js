@@ -9,7 +9,7 @@ const HomeMax = styled.div`
       left:38vw;
       bottom:0;
       background: rgba(0, 0, 0, 0.8);
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
             width:100vw;
             left:0;
             height: 45vh;
@@ -28,7 +28,7 @@ const Hometitle = styled.div`
       font-size: 11vh;
       line-height: 11vh;
       color:white;
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
         bottom:24vh;
         white-space: pre-wrap;
         text-align: right;
@@ -50,7 +50,7 @@ const Homedes = styled.div`
       font-size: 7vh;
       line-height: 7vh;
       color:white;
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
         bottom:16vh;
         font-size: 3.5vh;
         line-height: 3.5vh;

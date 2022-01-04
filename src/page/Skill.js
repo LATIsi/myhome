@@ -24,14 +24,14 @@ const SkillTitle = styled.text`
       line-height: 8vh;
       color: #FFFFFF;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      @media screen and (max-width: 712px) {
-        white-space: pre-wrap;
-        Bottom:80vh;
-        font-size: 5vh;
-        line-height: 5vh;
-        width: 100vw;
-        left: 8vw;
-      }
+            @media screen and (max-width: 750px) {
+              white-space: pre-wrap;
+              Bottom:80vh;
+              font-size: 5vh;
+              line-height: 5vh;
+              width: 100vw;
+              left: 8vw;
+            }
 
 `;
 
@@ -43,7 +43,7 @@ const SkillLine = styled.text`
     Bottom:73.5vh;
     background: #FFFFFF;
     border: none;
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 750px) {
       visibility: hidden;
     }
 `;
@@ -69,7 +69,7 @@ const SkillMainTitle = styled.text`
     box-shadow:  0.05vw 0.2vw 4px rgba(0, 0, 0, 0.25);
     border-radius: 1vw;
     color: ${props => props.color};
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 750px) {
       width: 85vw;
       font-size: 4vh;
       line-height: 8vh;
@@ -110,7 +110,7 @@ const SkillMain = styled.div`
         padding-top:5vh;
       }
 
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
         width: 85vw;
         border-radius: 0 0 5vw 5vw ;
         height: 60vh;
@@ -141,7 +141,7 @@ const SkillButton = styled.button`
       background-color: #C4C4C4;
     }
 
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 750px) {
       bottom:69vh;
       border-radius: 3vw;
       height: 2vh;

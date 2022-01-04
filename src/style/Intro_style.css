@@ -43,7 +43,7 @@
   border-radius: 20px;
 }
 
-@media screen and (width <= 712px) {
+@media screen and (max-width: 750px) {
   .IntroBg {
     position: absolute;
     width: 100vw;
@@ -76,14 +76,26 @@
   }
 }
 
-@media screen and (width <= 550px) {
+@media screen and (max-width: 550px) {
   .intro_Picture_in {
     right: 13vw;
     top: 4vh;
   }
 
   .intro_Picture {
-    width: 20vh;
-    height: 20vh;
+    width: 15vh;
+    height: 15vh;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .intro_Picture_in {
+    right: 23vw;
+    top: -2vh;
+  }
+
+  .intro_Picture {
+    width: 9vh;
+    height: 9vh;
   }
 }

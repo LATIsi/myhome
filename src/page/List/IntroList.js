@@ -81,8 +81,12 @@ const IntrolistBlock = styled.div`
       background-color: #a4b3be;
       border-radius: 5px;  
     }
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
         height: 55vh;
+      }
+
+      @media screen and (max-width: 499px) {
+        height: 60vh;
       }
 `;
 

@@ -10,10 +10,16 @@ const IntroRecord = styled.div`
   height: 100vh;
   position: absolute;
   background: #0468bf;
-        @media screen and (max-width: 712px) {
+        @media screen and (max-width: 750px) {
           top:30vh;
           width: 100vw;
           height: 70vh;
+        }
+
+        @media screen and (max-width: 499px) {
+          top:25vh;
+          width: 100vw;
+          height: 75vh;
         }
 `;
 
@@ -25,12 +31,17 @@ const Introself = styled.div`
   box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.4);
   background: #f2f2f2;
 
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
         top:0;
         width: 100vw;
         height: 30vh;
       }
 
+      @media screen and (max-width: 499px) {
+        top:0;
+        width: 100vw;
+        height: 25vh;
+      }
 `;
 
 const IntroselfTop = styled.div`
@@ -40,19 +51,13 @@ const IntroselfTop = styled.div`
   right: 16vw;
   top: 15vh;
 
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
         top:2vh;
         width: 100vw;
         height: 25vh;
         right: 0;
       }
 
-      @media screen and (max-width: 712px) {
-        top:2vh;
-        width: 100vw;
-        height: 25vh;
-        right: 0;
-      }
 `;
 
 const IntroselfDown = styled.div`
@@ -62,11 +67,21 @@ const IntroselfDown = styled.div`
   right: 10%;
   top: 48%;
 
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
         top: 18vh;
         right:45vw;
         height: 10vh;
         width: 60vw;
+      }
+
+      @media screen and (max-width: 550px) {
+        right:40vw;
+      }
+
+      @media screen and (max-width: 499px) {
+        width: 80vw;
+        right:25vw;
+        top: 16.5vh;
       }
 
 `;
@@ -85,12 +100,25 @@ const Name = styled.text`
   text-align: right;
   color: #000000;
 
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 750px) {
       width: 40vw;
       font-size: 7vw;
       line-height: 7vw;
       bottom:14vh;
       right:45vw;
+    }
+
+    @media screen and (max-width: 550px) {
+      font-size: 6vw;
+      line-height: 6vw;
+      right:40vw;
+    }
+
+    @media screen and (max-width: 499px) {
+      font-size: 8vw;
+      line-height: 8vw;
+      right:55vw;
+      bottom:17vh;
     }
 `;
 
@@ -108,9 +136,23 @@ const Birthday = styled.text`
   text-align: right;
   color: #000000;
 
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
         bottom:10vh;
         right:45vw;
+      }
+
+      @media screen and (max-width: 550px) {
+        font-size: 2.7vw;
+        line-height: 2.7vw;
+        bottom:10.5vh;
+        right:40vw;
+      }
+
+      @media screen and (max-width: 499px) {
+        font-size: 4vw;
+        line-height: 4vw;
+        right:55vw;
+        bottom:14.5vh;
       }
 `;
 
@@ -123,7 +165,7 @@ const IntroHr1 = styled.hr`
   background: #C8C8C8;
   border: none;
 
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
         display:none;
       }
 `;
@@ -144,10 +186,18 @@ const IntroselfText = styled.text`
   text-align: right;
   color: #223440;
 
-      @media screen and (max-width: 712px) {
-        width: 60vw;
+      @media screen and (max-width: 750px) {
+        width: 50vw;
         height: auto;
         bottom:0;
+      }
+     
+      @media screen and (max-width: 499px) {
+        width: 70vw;
+        height: auto;
+        bottom:0;
+        font-size: 1.8vh;
+        line-height: 2vh;
       }
 `;
 
@@ -164,10 +214,16 @@ const EduCertiDiv = styled.div`
           width: 56vw;
         }
 
-        @media screen and (max-width: 712px) {
+        @media screen and (max-width: 750px) {
           width: 95vw;
           top: 15vh;
           height: 55vh;
+        }
+
+        @media screen and (max-width: 499px) {
+          width: 95vw;
+          top: 13.5vh;
+          height: 60vh;
         }
 `;
 
@@ -203,7 +259,7 @@ const SelectButton = styled.button`
         left:14.5%;
       }
 
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
         top: 6vh;
         width: 47.5vw;
         left:26.3vw;
@@ -213,7 +269,10 @@ const SelectButton = styled.button`
             & + Button {
               margin-left:47.5vw;
             }
+      }
 
+      @media screen and (max-width: 499px) {
+        font-size: 2.5vh;
       }
 `;
 
@@ -237,12 +296,21 @@ const Icons = styled.div`
         right: 1.3vw;
       }
 
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
         right:5vw;
         bottom:1vh;
         height:3vh;
         width: 2vw;
       }
+
+      @media screen and (max-width: 550px) {
+        right:10vw;
+      }
+      
+      @media screen and (max-width: 499px) {
+        bottom:7vh;
+      }
+
 `;
 
 const View1 = styled.div`
@@ -253,6 +321,7 @@ const View1 = styled.div`
   right: 0;
   text-align: right;
   display: inline;
+
 `;
 
 

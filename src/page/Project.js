@@ -43,7 +43,7 @@ font-size: 8vh;
 line-height: 8vh;
 /* identical to box height */
 color: #000000;
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 750px) {
       top:3vh;
     }
 `;
@@ -76,7 +76,7 @@ right:-10px;
 top:21vh;
 background:#E1E1E1;
 border: none;
-      @media screen and (max-width: 712px) {
+      @media screen and (max-width: 750px) {
         top:13vh;
       }
 `;
@@ -135,7 +135,7 @@ left:-50%;
 bottom:0;
 text-align:right;
 margin-right:40vw;
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 750px) {
       white-space: pre-wrap;
       bottom:3vh;
       left:-60%;

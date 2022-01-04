@@ -40,7 +40,7 @@ const Open = styled.div`
     font-size: 7vh;
     visibility: hidden;
     display:none;
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 750px) {
       display:inline;
       visibility: visible;  
       ${props => props.nevOpen && css`
@@ -59,7 +59,7 @@ const Close = styled.div`
     color:white;
     font-size: 5vh;
     visibility: hidden;
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 750px) {
       visibility: hidden;   
       ${props => props.nevOpen && css`
           visibility: visible; 
@@ -69,7 +69,7 @@ const Close = styled.div`
 
 const NavDiv = styled.div`
     visibility: visible;
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 750px) {
       visibility: hidden;
       ${props => props.nevOpen && css`
           visibility: visible;          
