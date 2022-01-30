@@ -118,7 +118,8 @@ const Name = styled.text`
       font-size: 8vw;
       line-height: 8vw;
       right:55vw;
-      bottom:17vh;
+      bottom:none;
+      top:4vh;
     }
 `;
 
@@ -152,7 +153,8 @@ const Birthday = styled.text`
         font-size: 4vw;
         line-height: 4vw;
         right:55vw;
-        bottom:14.5vh;
+        bottom:none;
+        top:9vh;
       }
 `;
 

@@ -18,13 +18,13 @@ const IntroEduCotent = [
   },
   {
     id: 3,
-    day: '2021.10 - now',
+    day: '2021.10 - 2021.12',
     desc: 'react / JS 책을 활용해 클론 코딩,\n 간단한 TOY 프로젝트를 하며 개선점을 찾아가는 중',
     edu: 'Edu'
   },
   {
     id: 4,
-    day: '2021.12-',
+    day: '2022.02',
     desc: '프로젝트 진행중',
     edu: 'Edu'
   },
@@ -63,7 +63,19 @@ const IntroEduCotent = [
     day: '2021.06',
     desc: '정보처리산업기사',
     edu: 'Certi'
-  }
+  },
+  {
+    id: 11,
+    day: '2022.01',
+    desc: '운전면허 2급 보통',
+    edu: 'Certi'
+  },
+  {
+    id: 12,
+    day: '2022.02 - 2022.04 ',
+    desc: '구름 edu / k-크레딧 풀스택 자바스크립트 19기 수강예정',
+    edu: 'Edu'
+  },
 ];
 const IntrolistBlock = styled.div`
     width: 100%;
