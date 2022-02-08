@@ -33,7 +33,7 @@ const Open = styled.div`
     position: absolute;
     top:2vh;
     right:6vw;
-    z-index: 2;
+    z-index: 5;
     height: auto;
     width: auto;
     color:black;

@@ -2,6 +2,7 @@ import React , { useState } from "react";
 import  styled, {css} from "styled-components";
 import SkillList from './List/SkillList';
 import "../style/Skill_style.css";
+import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
 const Skillbg = styled.div`
       position: absolute;
@@ -32,7 +33,6 @@ const SkillTitle = styled.text`
               width: 100vw;
               left: 8vw;
             }
-
 `;
 
 const SkillLine = styled.text`
@@ -77,7 +77,6 @@ const SkillMainTitle = styled.text`
       border-radius: 5vw;
       bottom: 62vh;
     }
-
 `;
 
 const SkillMain = styled.div`
@@ -105,11 +104,9 @@ const SkillMain = styled.div`
         border-radius: 5px;  
       }
       padding-top:7vh;
-
       @media screen and (max-width: 950px) {
         padding-top:5vh;
       }
-
       @media screen and (max-width: 750px) {
         width: 85vw;
         border-radius: 0 0 5vw 5vw ;
@@ -129,18 +126,15 @@ const SkillButton = styled.button`
            background-color: #C4C4C4;
       `}
     }
-
     & + & {
       margin-left: 3vw;
     }
-
     &:hover {
       ${props => props.incheck} {
             background-color: #C4C4C4;
           }
       background-color: #C4C4C4;
     }
-
     @media screen and (max-width: 750px) {
       bottom:69vh;
       border-radius: 3vw;
@@ -152,6 +146,84 @@ const SkillButton = styled.button`
     }
 `;
 
+const PreButton = styled.button`
+   position: absolute;
+   background: none;
+   border:none;
+   width: 15vw;
+   height: 100vh;
+   top:60%;
+   transform: translateY(-50%);
+   left:0vw;
+   z-index: 3;
+   text-align: center;
+
+   .pre {
+          color: rgba(0, 0, 0, 0.0);
+        }
+   
+   @media screen and (max-width:950px) {
+      width: auto;
+      top:60%;
+      transform: translateY(-50%);
+    } 
+    
+    @media screen and (max-width: 750px) {
+      left :-3vw;
+      top:60%;
+      transform: translateY(-50%);
+    } 
+
+    transition: 0.2s all ease-in;
+    &:hover{
+      left :0vw;
+      width:20vw;
+      background-color:rgba(0, 0, 0, 0.4);
+      .pre {
+          color: #fff;
+        }
+    }
+`;
+
+const NextButton = styled.button`
+   position: absolute;
+   background: none;
+   border:none;
+   width: 15vw;
+   height: 100vh;
+   top:60%;
+   transform: translateY(-50%);
+   right:0vw;
+   z-index: 3;
+   text-align: center;
+
+   .next {
+        color: rgba(0, 0, 0, 0.0);
+        }
+
+   @media screen and (max-width: 950px) {
+      width: auto;
+      top:60%;
+      transform: translateY(-50%);
+    } 
+
+    @media screen and (max-width: 750px) {
+      right : -3vw;
+      top:60%;
+      transform: translateY(-50%);
+
+    } 
+
+    transition: 0.2s all ease-in;
+    &:hover{
+       right :0vw;
+       width:20vw;
+       background-color:rgba(0, 0, 0, 0.4);  
+       .next {
+          color: #fff;
+        }
+    }
+`;
 
 //https://github.com/react-icons/react-icons 참고.
 
@@ -205,13 +277,14 @@ function Skill () {
             setInCheck4(true);
       }
 
-      const SkillTitledesc = "TOOL / \nLanguage SKILL"
-
+      const SkillTitledesc = "TOOL / \nLanguage SKILL";
       return(
           <Skillbg>
             <SkillTitle>{SkillTitledesc}</SkillTitle>
             <SkillLine/>
             <SkillMainTitle color={color}> {TitleText} </SkillMainTitle>
+	              <PreButton><BsChevronCompactLeft size="120" className="pre" /></PreButton>
+                <NextButton><BsChevronCompactRight size="120" className="next"  /></NextButton>
             <SkillMain>
               <SkillList color={color} select={SkillSelect} />
             </SkillMain>

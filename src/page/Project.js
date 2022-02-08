@@ -142,7 +142,9 @@ margin-right:40vw;
     }
 `;
 
+
 const FooterBg = styled.div`
+
 position:fixed ;
 width: 35vw;
 height:25vh;
@@ -151,13 +153,16 @@ text-align:right;
 right:-13vw;
 z-index:5;
 background:#e9ecef;
+
     ${props => props.open && css`
-    visibility: visible;
+         visibility: visible; 
     `}
 
     @media screen and (max-width: 900px) {
       width: 70vw;
     }
+
+
 `;
 
 const Close = styled.div`
@@ -205,8 +210,7 @@ function Project () {
   const [open, setOpen] = useState(false);
   const onToggle = () => setOpen(!open)
 
-  const topdesc = "대학교 조별과제로 진행한 \n프로젝트 입니다."
-
+      const topdesc = "대학교 조별과제로 진행한 \n프로젝트 입니다."
 
       const footerText="Copyright 2021. kmj. all rights reserverd.\n & 사진 출처";
       const footerdesc1="home 이미지 - Photo by Zan \n ";

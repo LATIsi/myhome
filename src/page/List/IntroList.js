@@ -73,7 +73,7 @@ const IntroEduCotent = [
   {
     id: 12,
     day: '2022.02 - 2022.04 ',
-    desc: '구름 edu / k-크레딧 풀스택 자바스크립트 19기 수강예정',
+    desc: '구름 edu / k-크레딧 풀스택 자바스크립트 19기 수강 중',
     edu: 'Edu'
   },
 ];

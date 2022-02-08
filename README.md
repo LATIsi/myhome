@@ -107,3 +107,5 @@ UI디자인은 figma로 디자인.
 
 라우팅이 적용된 React SPA(Single Page Application)을 Github Page로 넣는것에 오류가 생김.  
 -> 12.22일 오류 수정
+
+0.2.4 - skill부분에 전, 후 애니메이션 효과 추가
